@@ -1,0 +1,40 @@
+//Webpage load
+@keyframes FadeInLoad{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+//Navbar on load
+@keyframes TopBottomLoad {
+    0% {transform: translateY(-200px);}
+    100% {transform: translateY(0px);}
+}
+
+//Navbar hide on scroll (uses JS)
+.scrolled-down{
+    transform:translateY(-100%); 
+    transition: all 0.3s ease-in-out;
+}
+
+.scrolled-up{
+    transform:translateY(0); 
+    transition: all 0.3s ease-in-out;
+}
+
+//Logo hover 
+@keyframes HoverZoom {
+    0% {transform: scale(1);}
+    100% {transform: scale(1.05);}
+}
+
+//Navbar item hover 
+@keyframes NavItemHover {
+    0% {transform: rotateY(0deg);}
+    100% {transform: rotateY(180deg);}
+}
+
+//Arrow scroll hover
+@keyframes ArrowHover {
+    0% {transform: translateY(-20px);}
+    100% {transform: translateY(0px);}
+}

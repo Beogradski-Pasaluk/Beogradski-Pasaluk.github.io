@@ -1,0 +1,48 @@
+.dark-mode {
+    background-color: $darkbg;
+    color: $darktxt;
+    #dark-mode-button {
+        border: 0;
+        background-color: $darkbg;
+        color: $darktxt;
+    } 
+    .navbar {
+        background-color: $darkbg;
+        .nav-link {
+            color: $darktxt;
+        }
+        .nav-link::after{
+            @include underline-hover-after;
+            background-color: $darktxt;
+        }
+        .nav-link:hover::after{
+            @include underline-hover-after2;
+        }
+        .dropdown-menu {
+            background-color: $darkbg;
+            .dropdown-item {
+                color: $darktxt;
+            }
+            .dropdown-item:hover {
+                background-color: $darklinkhover;
+            }
+            .dropdown-item::after{
+                @include underline-hover-after;
+                background-color: $darktxt;
+            }
+            .dropdown-item:hover::after{
+                @include underline-hover-after2;
+                background-color: $darktxt;
+            }
+        }
+    }
+    footer {
+        border-top: 1px solid $darktxt;
+        div span {
+            color: $darktxt;
+        }
+        .bi-discord {
+            fill: $darktxt;
+        }
+    }
+}

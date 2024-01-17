@@ -1,0 +1,132 @@
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/animations";
+@import "partials/darkmode";
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    animation: FadeInLoad 0.3s ease;
+    overflow-x: hidden;
+    font-family: Lora, serif;
+    color: $whitetxt;
+}
+
+//Scrollbar design webkit and moz
+::-webkit-scrollbar {
+    @include scrollbar;
+}
+
+::-webkit-scrollbar-thumb {
+    @include scrollbar-thumb;
+}
+
+::-moz-scrollbar {
+    @include scrollbar;
+}
+
+::-moz-scrollbar-thumb {
+    @include scrollbar-thumb;
+}
+
+//Navbar
+.navbar {
+    box-shadow: 0 4px 3px 0px #000;
+    animation: TopBottomLoad 1.5s ease;
+    background-color: #f3f6f4;
+    padding: 0 3rem;
+    .navbar-brand img {
+        max-width: 15vw; 
+        display: block;
+        width: 100%;
+    }
+    .navbar-brand img:hover {
+        animation: HoverZoom 0.5s ease;
+        animation-fill-mode: both;
+    }
+    .navbar-nav {
+        color: $whitetxt;
+    }
+    .nav-item {
+        font-size: 1.5em;
+        margin: 30px;
+    }
+    .nav-link:hover {
+        animation: HoverZoom 150ms ease;
+        animation-fill-mode: both;
+    }
+    .nav-link::after{
+        @include underline-hover-after;
+    }
+    .nav-link:hover::after{
+        @include underline-hover-after2;
+    }
+    .dropdown-menu {
+        .dropdown-item {
+            font-size: 20px;
+        }
+        .dropdown-item:hover {
+            background-color: $whitelinkhover;
+        }
+        .dropdown-item::after{
+            @include underline-hover-after;
+        }
+        .dropdown-item:hover::after{
+            @include underline-hover-after2;
+        }
+    }
+}
+
+//Darkmode button 
+#dark-mode-button {
+    border: 0;
+    background-color: $whitebg;
+    color: $whitetxt;
+} 
+
+//Text on carousel images
+.carousel-content {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    z-index: 20;
+    color: white;
+    h1 {
+        font-size: 80px;
+
+    }
+}
+//Main
+main {
+    .main-header {
+        text-align: center;
+        padding: 1% 0;
+    }
+    .row .col .card {
+        width: 100%;
+        height: auto;
+    }
+}
+
+//Footer
+footer {
+   border-top: 1px solid black;
+   width: 90%;
+   margin: 0 auto;
+    div {
+        span {
+            color: black;
+        }
+    }
+    .bi-discord {
+        color: black;
+    }
+}
