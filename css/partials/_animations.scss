@@ -27,11 +27,17 @@
     100% {transform: scale(1.05);}
 }
 
+@keyframes HoverZoomOut {
+    0% {transform: scale(1.05);}
+    100% {transform: scale(1);}
+}
+
 //Navbar item hover 
 @keyframes NavItemHover {
     0% {transform: rotateY(0deg);}
     100% {transform: rotateY(180deg);}
 }
+
 
 //Arrow scroll hover
 @keyframes ArrowHover {

@@ -8,6 +8,7 @@
     } 
     .navbar {
         background-color: $darkbg;
+        box-shadow: 0 4px 3px 0px #e2e2e2;
         .nav-link {
             color: $darktxt;
         }
@@ -33,6 +34,29 @@
             .dropdown-item:hover::after{
                 @include underline-hover-after2;
                 background-color: $darktxt;
+            }
+        }
+    }
+    main {
+        .pad {
+            .container {
+                span {
+                    background-color: $darkbg;
+                }
+            }
+        }
+        .container {
+            .card {
+                background-color: $darkbg;
+                color: $darktxt;
+                border: 1px solid white;
+                .card-body {
+                    .btn-primary {
+                        border: 1px solid white;
+                        background-color: $whitebg;
+                        color: $whitetxt;
+                    }
+                }
             }
         }
     }

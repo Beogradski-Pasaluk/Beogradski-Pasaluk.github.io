@@ -3,7 +3,7 @@
 <head>
     <!--Title, Favicon and Meta-->
     <title>Београдски Пашалук</title>
-    <link rel="shortcut icon" type="image/png" href="img/favicon-and-logo/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="https://images2.imgbox.com/37/97/gm9qA7mn_o.png">
 
     <!--Meta tags-->
     <meta charset="UTF-8">
@@ -44,8 +44,7 @@
         <header>
             <nav class="navbar navbar-expand-lg fixed-top autohide">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html"><img class="img-fluid col-4" src="img/favicon-and-logo/banner.png" alt="Pasaluk Logo"></a>
-                    <!-- <p class="navbar-brand" id="logo-text">Београдски Пашалук</p> -->
+                    <a class="navbar-brand" href="index.html"><img class="img-fluid col-4" src="https://images2.imgbox.com/2f/fe/8OsIzEnV_o.png" alt="Pasaluk Logo"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -54,104 +53,109 @@
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="index.html">Почетна</a>
                             </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="index.html">Minecraft</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="index.html">Battlefield 1</a>
-                            </li> -->
                             <li class="nav-item dropdown">
-                                <a class="nav-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">Занимање ˅</a>
+                                <a class="nav-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">Активности ˅</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Minecraft</a></li>
-                                    <li><a class="dropdown-item" href="#">Battlefield 1</a></li>
+                                    <li><a class="dropdown-item" href="pages/activities/minecraft.html">Minecraft</a></li>
+                                    <li><a class="dropdown-item" href="pages/activities/bf1.html">Battlefield 1</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">Е-Житељ ˅</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Новости</a></li>
                                     <li><a class="dropdown-item" href="pages/e_zitelj/Katastar.html">Катастар</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="pages/Join_Us.html">Постани житељ</a></li>
+                                    <li><a class="dropdown-item" href="pages/e_zitelj/Join_Us.html">Постани житељ</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="pages/About_Us.html">О нама</a>
                             </li>
                         </ul>
+                        <!-- <button id="toggle-button">Toggle Dark Mode</button> -->
+                        <button id="dark-mode-button" class="btn btn-primary" onclick="DarkMode()" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+                                <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+                            </svg>
+                        </button>
                     </div>
-                    <button id="dark-mode-button" onclick="DarkMode()">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
-                            <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
-                        </svg>
-                    </button>
                 </div>
             </nav>
         </header>
-    
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-touch="false" data-bs-interval="3000">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://images2.imgbox.com/6f/20/LWahyVpM_o.jpg" class="d-block w-100" alt="Слика са Пашалука">
-                    <div class="carousel-content">
-                        <h1>Добродошли на <br>Београдски Пашалук</h1>
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-touch="false" data-bs-interval="3000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://images2.imgbox.com/6f/20/LWahyVpM_o.jpg" class="d-block w-100" alt="Слика са Пашалука">
+                        <div class="carousel-content">
+                            <h1>Добродошли на <br>Београдски Пашалук</h1>
+                        </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://images2.imgbox.com/5f/56/P8BzzoZ6_o.jpg" class="d-block w-100" alt="Слика са Пашалука">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://images2.imgbox.com/ef/69/QsyE2uMB_o.jpg" class="d-block w-100" alt="Слика са Пашалука">
+                    <div class="carousel-item">
+                        <img src="https://images2.imgbox.com/5f/56/P8BzzoZ6_o.jpg" class="d-block w-100" alt="Слика са Пашалука">
+                        <div class="carousel-content">
+                            <h2>Увек добра блеја</h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images2.imgbox.com/ef/69/QsyE2uMB_o.jpg" class="d-block w-100" alt="Слика са Пашалука">
+                        <div class="carousel-content">
+                            <h2>Твоја мама :)</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <main>
-            <h1 class="main-header">Гарантовано добра блеја!</h1>
-            <div class="row">
-                <div class="col">
-                    <div class="card">
-                        <img src="img/cards/minecraft.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Пашалук продубљује креативност на Minecraft серверу</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div id="Parallax">
+            <main>
+                <h1 class="main-header">Гарантовано добра блеја!</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card text-center">
+                                <img src="https://images2.imgbox.com/0e/ae/WOY0Y9xr_o.jpg" class="card-img-top" alt="Minecraft">
+                                <div class="card-body">
+                                    <h5 class="card-title">Пашалук на Minecraft серверу</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="pages/activities/minecraft.html" class="btn btn-primary">Сазнајте више</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card text-center">
+                                <img src="https://images2.imgbox.com/90/82/ndlV27h9_o.jpg" class="card-img-top" alt="Battlefield 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Пашалук у рововима са <span>ATAC</span> кланом</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="pages/activities/minecraft.html" class="btn btn-primary">Сазнајте више</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="img/cards/bf1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Пашалук у рововима са ATAC кланом</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="col">
-                    <div class="card">
-                        <img src="img/cards/minecraft.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Пашалук Minecraft Сервер</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                <!-- <div class="container">
+                    <div class="row">
+                        <div class="offset-3 col-6 text-center">
+                            <div id="discord-card" class="card">
+                                <img src="https://images2.imgbox.com/98/c4/dKrZ81ot_o.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h3>Постани део екипе!</h3>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div> -->
-            </div>
-
-        </main>
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
-            <div class="col-md-4 d-flex align-items-center">
-                <span class="mb-4 mb-md-0">&copy; 2024 Београдски Пашалук</span>
-            </div>
-            <a href="https://discord.gg/wC64Z9rMkk" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
-                    <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
-                </svg>   
-            </a>
-        </footer>
+            </main>
+    
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+                <div class="col-md-4 d-flex align-items-center">
+                    <span class="mb-4 mb-md-0">&copy; 2024 Београдски Пашалук</span>
+                </div>
+                <a href="https://discord.gg/wC64Z9rMkk" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                        <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
+                    </svg>   
+                </a>
+            </footer>
+        </div>
     </div>
 </body>
 </html>

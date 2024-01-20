@@ -1,23 +1,31 @@
-//Lightmode switch
-function LightMode() {
-  var element = document.body;
-  element.classList.toggle("light-mode");
-}
+// const toggleButton = document.getElementById('dark-mode-button');
+// const darkbody = document.body;
+
+// // Check for saved 'darkMode' in localStorage
+// const darkMode = localStorage.getItem('darkMode');
+
+// if (darkMode) {
+//     body.classList.add('dark-mode');
+// }
+
+// toggleButton.onclick = function() {
+//     body.classList.toggle('dark-mode');
+
+//     // Save the current preference to localStorage
+//     localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+// }
 
 //Darkmode switch
 function DarkMode() {
-  var element = document.body;
-  // var icon = anchor.querySelector("svg");
-  // icon.classList.toggle('bi bi-brightness-high-fill');
-  // icon.classList.toggle('bi bi-moon-fill');
-  element.classList.toggle("dark-mode");
+  var darkbody = document.body;
+  darkbody.classList.toggle("dark-mode");
 }
 
 //Luxury brown switch
-function LuxuryBrownMode() {
-  var element = document.body;
-  element.classList.toggle("luxury-brown-mode");
-}
+// function LuxuryBrownMode() {
+//   var element = document.body;
+//   element.classList.toggle("luxury-brown-mode");
+// }
 
 // Auto Hide Navbar
 document.addEventListener("DOMContentLoaded", function(){

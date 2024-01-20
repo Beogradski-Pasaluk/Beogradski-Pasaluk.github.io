@@ -1,7 +1,8 @@
 @import "partials/variables";
-@import "partials/mixins";
 @import "partials/animations";
+@import "partials/mixins";
 @import "partials/darkmode";
+@import "partials/luxurybrownmode";
 
 * {
     padding: 0;
@@ -13,10 +14,13 @@ html {
 }
 
 body {
-    animation: FadeInLoad 0.3s ease;
+    animation: FadeInLoad 1s ease;
+    animation-fill-mode: both;
     overflow-x: hidden;
     font-family: Lora, serif;
     color: $whitetxt;
+    background-attachment: fixed;
+
 }
 
 //Scrollbar design webkit and moz
@@ -40,12 +44,13 @@ body {
 .navbar {
     box-shadow: 0 4px 3px 0px #000;
     animation: TopBottomLoad 1.5s ease;
-    background-color: #f3f6f4;
+    background-color: $whitenavbar;
     padding: 0 3rem;
     .navbar-brand img {
         max-width: 15vw; 
         display: block;
         width: 100%;
+        animation: HoverZoomOut 0.5s ease;
     }
     .navbar-brand img:hover {
         animation: HoverZoom 0.5s ease;
@@ -58,6 +63,9 @@ body {
         font-size: 1.5em;
         margin: 30px;
     }
+    .nav-link {
+        animation: HoverZoomOut 0.3s ease;
+    }
     .nav-link:hover {
         animation: HoverZoom 150ms ease;
         animation-fill-mode: both;
@@ -67,6 +75,16 @@ body {
     }
     .nav-link:hover::after{
         @include underline-hover-after2;
+    }
+    .nav-link {
+        color: $whitetxt;
+    }
+    .active {
+        font-weight: bold !important;
+    }
+    .dropdown-item.active {
+        background-color: $whitenavbar;
+        color: $whitetxt;
     }
     .dropdown-menu {
         .dropdown-item {
@@ -82,14 +100,26 @@ body {
             @include underline-hover-after2;
         }
     }
+    // .navbar-toggler {
+    //     margin: 1%;
+    //     // .navbar-toggler-icon {
+            
+    //     // }
+    // }
 }
 
 //Darkmode button 
 #dark-mode-button {
     border: 0;
-    background-color: $whitebg;
+    background-color: $whitenavbar;
     color: $whitetxt;
+    animation: HoverZoomOut 0.3s ease;
 } 
+
+#dark-mode-button{
+    animation: HoverZoom 0.3s ease;
+    animation-fill-mode: both;
+}
 
 //Text on carousel images
 .carousel-content {
@@ -100,18 +130,79 @@ body {
     color: white;
     h1 {
         font-size: 80px;
-
+    }
+    h2 {
+        font-size: 80px;
     }
 }
+
+// #Parallax {
+//     background-color: aliceblue;
+//     width: 100%;
+//     height: 50vh;
+//     background-attachment: fixed;
+// } 
+
 //Main
 main {
+    //For secondary webpages
+    .pad {
+        margin-top: 6%;
+        margin-bottom: -3%;
+        .container {
+            .card {
+                border: none;
+                justify-content: center;
+                padding: 0;
+            }
+            p {
+                margin-top: -5%;
+                font-size: 20px;
+              span {
+                color: #dfc978;
+                background-color: #444444;
+              }  
+            }
+        }
+    }
     .main-header {
         text-align: center;
         padding: 1% 0;
     }
-    .row .col .card {
-        width: 100%;
-        height: auto;
+    .container {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 5%;
+        margin-top: 1%;
+        .card {
+            width: 100%;
+            animation: HoverZoomOut 0.3s ease;
+            .card-body {
+                span {
+                    font-style: italic;
+                }
+                .btn-primary {
+                    border: 1px solid #000 ;
+                    background-color: #000;
+                    color: $darktxt;
+                    animation: HoverZoomOut 0.3s ease;
+                }
+                .btn-primary:hover {
+                    background-color: $whitebg;
+                    color: $whitetxt;
+                    border: 1px solid #000 ;
+                    animation: HoverZoom 0.3s ease;
+                    animation-fill-mode: both;
+                }
+                h3 {
+                    text-align: center;
+                }
+            }
+        }
+        .card:hover {
+            animation: HoverZoom 0.3s ease;
+            animation-fill-mode: both;
+        }
     }
 }
 
@@ -129,3 +220,5 @@ footer {
         color: black;
     }
 }
+
+@import "partials/responsive";
