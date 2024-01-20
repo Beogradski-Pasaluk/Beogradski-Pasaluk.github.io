@@ -90,6 +90,7 @@
 }
 .dark-mode .navbar .dropdown-menu .dropdown-item {
   color: #fff;
+  background-color: #121212;
 }
 .dark-mode .navbar .dropdown-menu .dropdown-item:hover {
   background-color: #444444;
@@ -127,7 +128,7 @@
 .dark-mode footer div span {
   color: #fff;
 }
-.dark-mode footer .bi-discord {
+.dark-mode footer .bi {
   fill: #fff;
 }
 
@@ -406,8 +407,9 @@ footer {
 }
 footer div span {
   color: black;
+  margin-right: 20px;
 }
-footer .bi-discord {
+footer .bi {
   color: black;
 }
 

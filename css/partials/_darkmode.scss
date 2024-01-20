@@ -23,6 +23,7 @@
             background-color: $darkbg;
             .dropdown-item {
                 color: $darktxt;
+                background-color: $darkbg;
             }
             .dropdown-item:hover {
                 background-color: $darklinkhover;
@@ -65,7 +66,7 @@
         div span {
             color: $darktxt;
         }
-        .bi-discord {
+        .bi {
             fill: $darktxt;
         }
     }
