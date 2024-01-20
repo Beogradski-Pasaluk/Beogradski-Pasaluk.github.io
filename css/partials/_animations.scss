@@ -38,9 +38,13 @@
     100% {transform: rotateY(180deg);}
 }
 
-
-//Arrow scroll hover
-@keyframes ArrowHover {
-    0% {transform: translateY(-20px);}
+@keyframes DropDownLoad {
+    0% {transform: translateY(50px);}
     100% {transform: translateY(0px);}
 }
+
+//Arrow scroll hover
+// @keyframes ArrowHover {
+//     0% {transform: translateY(-20px);}
+//     100% {transform: translateY(0px);}
+// }

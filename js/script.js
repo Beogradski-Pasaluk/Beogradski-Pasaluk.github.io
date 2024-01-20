@@ -31,10 +31,11 @@ function DarkMode() {
 document.addEventListener("DOMContentLoaded", function(){
 
     el_autohide = document.querySelector('.autohide');
+    showclass = document.querySelector('.dropdown-menu')
     
     // add padding-top to bady (if necessary)
     // navbar_height = document.querySelector('.navbar').offsetHeight;
-    // document.body.style.paddingTop = navbar_height + 'px';
+    // document.body.style.paddingTop =0 navbar_height + 'px';
   
     if(el_autohide){
       var last_scroll_top = 5;
@@ -43,10 +44,12 @@ document.addEventListener("DOMContentLoaded", function(){
            if(scroll_top < last_scroll_top) {
                 el_autohide.classList.remove('scrolled-down');
                 el_autohide.classList.add('scrolled-up');
+                showclass.classList.add('show');
             }
             else {
                 el_autohide.classList.remove('scrolled-up');
                 el_autohide.classList.add('scrolled-down');
+                showclass.classList.remove('show');
             }
             last_scroll_top = scroll_top;
       }); 

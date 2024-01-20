@@ -1,20 +1,43 @@
-@media only screen and (max-width:1400px) {
+@media only screen and (max-width:1200px) {
     .navbar {
-        .nav-link {
-            font-size: 18px;
+        .nav-item {
+            margin: 15px;
         }
     }
-    main {
-        .pad {
-            margin-top: 9%;
+    .carousel-content {
+        h1 {
+            font-size: 60px;
         }
     }
 }
 
-@media only screen and (max-width:1150px) {
-    main {
-        .pad {
-            margin-top: 13%;
+@media only screen and (max-width:992px) {
+    .navbar {
+        #dark-mode-button {
+            margin-bottom: 5%;
+            margin-left: 2%;
+        }
+    }
+    .carousel-content {
+        h1 {
+            font-size: $sizemd;
+        }
+        h2 {
+            font-size: $sizemd;
+        }
+    }
+    .col-12.col-sm-12.col-md-12.col-lg-6 {//only touches the cards on main page
+        margin-bottom: 3%;
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .carousel-content {
+        h1 {
+            font-size: $sizesm;
+        }
+        h2 {
+            font-size: $sizesm;
         }
     }
 }

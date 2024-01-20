@@ -48,9 +48,9 @@
     transform: rotateY(180deg);
   }
 }
-@keyframes ArrowHover {
+@keyframes DropDownLoad {
   0% {
-    transform: translateY(-20px);
+    transform: translateY(50px);
   }
   100% {
     transform: translateY(0px);
@@ -119,6 +119,10 @@
 }
 .dark-mode main .container .card .card-body .btn-primary {
   border: 1px solid white;
+  background-color: #fff;
+  color: #000;
+}
+.dark-mode main #join-button {
   background-color: #fff;
   color: #000;
 }
@@ -250,7 +254,7 @@ body {
 
 .navbar {
   box-shadow: 0 4px 3px 0px #000;
-  animation: TopBottomLoad 1.5s ease;
+  animation: TopBottomLoad 1s ease;
   background-color: #f3f6f4;
   padding: 0 3rem;
 }
@@ -300,8 +304,11 @@ body {
   background-color: #f3f6f4;
   color: #000;
 }
+.navbar .dropdown-menu {
+  animation: DropDownLoad 0.3s ease;
+}
 .navbar .dropdown-menu .dropdown-item {
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 .navbar .dropdown-menu .dropdown-item:hover {
   background-color: #eeeeee;
@@ -339,10 +346,13 @@ body {
   color: white;
 }
 .carousel-content h1 {
-  font-size: 80px;
+  font-size: 5rem;
+}
+.carousel-content h1 span {
+  font-style: italic;
 }
 .carousel-content h2 {
-  font-size: 80px;
+  font-size: 5rem;
 }
 
 main .pad {
@@ -376,6 +386,11 @@ main .container .card {
   width: 100%;
   animation: HoverZoomOut 0.3s ease;
 }
+main .container .card svg {
+  text-align: center;
+  justify-content: center;
+  margin: 5% auto;
+}
 main .container .card .card-body span {
   font-style: italic;
 }
@@ -399,6 +414,19 @@ main .container .card:hover {
   animation: HoverZoom 0.3s ease;
   animation-fill-mode: both;
 }
+main .splitter {
+  width: 50%;
+  background-color: #000;
+  margin: 5% auto;
+  opacity: 1;
+}
+main #join-button {
+  background-color: #121212;
+  color: #fff;
+}
+main a {
+  text-decoration: none;
+}
 
 footer {
   border-top: 1px solid black;
@@ -413,16 +441,34 @@ footer .bi {
   color: black;
 }
 
-@media only screen and (max-width: 1400px) {
-  .navbar .nav-link {
-    font-size: 18px;
+@media only screen and (max-width: 1200px) {
+  .navbar .nav-item {
+    margin: 15px;
   }
-  main .pad {
-    margin-top: 9%;
+  .carousel-content h1 {
+    font-size: 60px;
   }
 }
-@media only screen and (max-width: 1150px) {
-  main .pad {
-    margin-top: 13%;
+@media only screen and (max-width: 992px) {
+  .navbar #dark-mode-button {
+    margin-bottom: 5%;
+    margin-left: 2%;
+  }
+  .carousel-content h1 {
+    font-size: 3rem;
+  }
+  .carousel-content h2 {
+    font-size: 3rem;
+  }
+  .col-12.col-sm-12.col-md-12.col-lg-6 {
+    margin-bottom: 3%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .carousel-content h1 {
+    font-size: 2rem;
+  }
+  .carousel-content h2 {
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=style.css.map */

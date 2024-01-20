@@ -43,7 +43,7 @@ body {
 //Navbar
 .navbar {
     box-shadow: 0 4px 3px 0px #000;
-    animation: TopBottomLoad 1.5s ease;
+    animation: TopBottomLoad 1s ease;
     background-color: $whitenavbar;
     padding: 0 3rem;
     .navbar-brand img {
@@ -87,8 +87,9 @@ body {
         color: $whitetxt;
     }
     .dropdown-menu {
+            animation: DropDownLoad 0.3s ease;
         .dropdown-item {
-            font-size: 20px;
+            font-size: 1.2rem;
         }
         .dropdown-item:hover {
             background-color: $whitelinkhover;
@@ -100,12 +101,6 @@ body {
             @include underline-hover-after2;
         }
     }
-    // .navbar-toggler {
-    //     margin: 1%;
-    //     // .navbar-toggler-icon {
-            
-    //     // }
-    // }
 }
 
 //Darkmode button 
@@ -129,10 +124,13 @@ body {
     z-index: 20;
     color: white;
     h1 {
-        font-size: 80px;
+        font-size: 5rem;
+        span {
+            font-style: italic;
+        }
     }
     h2 {
-        font-size: 80px;
+        font-size: 5rem;
     }
 }
 
@@ -177,6 +175,11 @@ main {
         .card {
             width: 100%;
             animation: HoverZoomOut 0.3s ease;
+            svg {
+                text-align: center;
+                justify-content: center;
+                margin: 5% auto;
+            }
             .card-body {
                 span {
                     font-style: italic;
@@ -203,6 +206,19 @@ main {
             animation: HoverZoom 0.3s ease;
             animation-fill-mode: both;
         }
+    }
+    .splitter {
+        width: 50%;
+        background-color: $whitetxt;
+        margin: 5% auto;
+        opacity: 1;
+    }
+    #join-button {
+        background-color: $darkbg;
+        color: $darktxt;
+    }
+    a {
+        text-decoration: none;
     }
 }
 

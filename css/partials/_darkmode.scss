@@ -60,6 +60,10 @@
                 }
             }
         }
+        #join-button {
+            background-color: $whitebg;
+            color: $whitetxt;
+        }
     }
     footer {
         border-top: 1px solid $darktxt;
