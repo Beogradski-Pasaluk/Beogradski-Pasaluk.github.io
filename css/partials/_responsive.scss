@@ -13,6 +13,9 @@
 
 @media only screen and (max-width:992px) {
     .navbar {
+        .navbar-brand img {
+            max-width: 20vw;
+        }
         #dark-mode-button {
             margin-bottom: 5%;
             margin-left: 2%;
@@ -28,6 +31,12 @@
     }
     .col-12.col-sm-12.col-md-12.col-lg-6 {//only touches the cards on main page
         margin-bottom: 3%;
+    }
+    .col-12.col-lg-4 {//only touches the top and bottom 3rd card on minecraft page
+        margin-top: 3%;
+    }
+    .col-12.col-lg-3 {//only touches the mc ranks
+        margin-top: 3%;
     }
 }
 

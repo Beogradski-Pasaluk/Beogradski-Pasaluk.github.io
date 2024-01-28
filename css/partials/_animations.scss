@@ -12,12 +12,12 @@
 
 //Navbar hide on scroll (uses JS)
 .scrolled-down{
-    transform:translateY(-100%); 
+    transform: translateY(-100%); 
     transition: all 0.3s ease-in-out;
 }
 
 .scrolled-up{
-    transform:translateY(0); 
+    transform: translateY(0); 
     transition: all 0.3s ease-in-out;
 }
 
@@ -43,8 +43,32 @@
     100% {transform: translateY(0px);}
 }
 
-//Arrow scroll hover
-// @keyframes ArrowHover {
-//     0% {transform: translateY(-20px);}
-//     100% {transform: translateY(0px);}
-// }
+//Card hover
+@keyframes CardHover {
+    0% {background: linear-gradient(to right right, white 0%, transparent 0%) right;
+
+    }
+    100% {
+        background: linear-gradient(to bottom right, white 50%, transparent 50%) right;
+    }
+}
+
+//Breathing animation
+@keyframes BreathingXY {
+    0% {transform: scaleX(1); transform: scaleY(1);}
+    50% {transform: scaleX(1.05); transform: scaleY(1.02);}
+    100% {transform: scaleX(1); transform: scaleY(1);}
+}
+
+@keyframes BreathingX {
+    0%{transform: scaleX(1);}
+    50%{transform: scaleX(1.05);}
+    100%{transform: scaleX(1);}
+}
+
+//Tugging animation
+@keyframes Tugging {
+    0% {transform: translateY(-5px);}
+    50% {transform: translateY(0px);}
+    100% {transform: translateY(-5px);}
+}

@@ -1,3 +1,13 @@
+@import url(https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap);
+@import url(https://fonts.cdnfonts.com/css/minecraft-4);
+@import url(https://fonts.googleapis.com/css2?family=Special+Elite&display=swap);
+@font-face {
+    font-family: "MinecraftFont";
+    src: url(font/cyrillic-mojang-font-beta.ttf)
+}
+//Fonts /\ 
+//Partials \/
 @import "partials/variables";
 @import "partials/animations";
 @import "partials/mixins";
@@ -20,7 +30,6 @@ body {
     font-family: Lora, serif;
     color: $whitetxt;
     background-attachment: fixed;
-
 }
 
 //Scrollbar design webkit and moz
@@ -46,6 +55,7 @@ body {
     animation: TopBottomLoad 1s ease;
     background-color: $whitenavbar;
     padding: 0 3rem;
+    font-family: Cormorant SC, sans-serif;
     .navbar-brand img {
         max-width: 15vw; 
         display: block;
@@ -103,19 +113,6 @@ body {
     }
 }
 
-//Darkmode button 
-#dark-mode-button {
-    border: 0;
-    background-color: $whitenavbar;
-    color: $whitetxt;
-    animation: HoverZoomOut 0.3s ease;
-} 
-
-#dark-mode-button{
-    animation: HoverZoom 0.3s ease;
-    animation-fill-mode: both;
-}
-
 //Text on carousel images
 .carousel-content {
     position: absolute;
@@ -125,47 +122,27 @@ body {
     color: white;
     h1 {
         font-size: 5rem;
+        margin-bottom: 3%;
+        color: white;
         span {
             font-style: italic;
         }
     }
     h2 {
         font-size: 5rem;
+        margin-bottom: 3%;
+        span {
+            font-style: italic;
+        }
     }
 }
 
-// #Parallax {
-//     background-color: aliceblue;
-//     width: 100%;
-//     height: 50vh;
-//     background-attachment: fixed;
-// } 
-
 //Main
 main {
-    //For secondary webpages
-    .pad {
-        margin-top: 6%;
-        margin-bottom: -3%;
-        .container {
-            .card {
-                border: none;
-                justify-content: center;
-                padding: 0;
-            }
-            p {
-                margin-top: -5%;
-                font-size: 20px;
-              span {
-                color: #dfc978;
-                background-color: #444444;
-              }  
-            }
-        }
-    }
     .main-header {
         text-align: center;
-        padding: 1% 0;
+        padding: 1% 0%;
+        font-weight: bold;
     }
     .container {
         display: flex;
@@ -180,54 +157,143 @@ main {
                 justify-content: center;
                 margin: 5% auto;
             }
+            a {
+                color: $darktxt;
+            }
+            a:hover {
+                color: $whitetxt;
+            }
             .card-body {
-                span {
+                .card-title {
+                    font-weight: bold;
+                }
+                .card-text {
+                    a {
+                        color: $whitetxt;
+                        font-style: italic;
+                        text-decoration: underline;
+                    }
+                }
+                .card-span {
                     font-style: italic;
                 }
                 .btn-primary {
-                    border: 1px solid #000 ;
+                    border: $whiteborder;
                     background-color: #000;
                     color: $darktxt;
                     animation: HoverZoomOut 0.3s ease;
+                    font-weight: bold;
                 }
                 .btn-primary:hover {
                     background-color: $whitebg;
                     color: $whitetxt;
-                    border: 1px solid #000 ;
+                    border: $whiteborder ;
                     animation: HoverZoom 0.3s ease;
                     animation-fill-mode: both;
                 }
                 h3 {
                     text-align: center;
                 }
+                details {
+                    summary {
+                        padding: 1% 0;
+                    }
+                    summary:hover {
+                        text-decoration: underline;
+                    }
+                    a {
+                        color: $whitetxt;
+                        text-decoration: underline;
+                        font-style: italic;
+                    }
+                }
             }
         }
         .card:hover {
             animation: HoverZoom 0.3s ease;
+            background-position:right bottom;
             animation-fill-mode: both;
         }
+    }
+    iframe {
+        animation: BreathingXY 5s ease;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
     }
     .splitter {
         width: 50%;
         background-color: $whitetxt;
-        margin: 5% auto;
+        margin: 3% auto;
         opacity: 1;
     }
     #join-button {
-        background-color: $darkbg;
+        background-color: #000;
         color: $darktxt;
+        animation: BreathingX 6s ease;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+    }
+    #join-button:hover {
+        background-color: $whitebg;
+        color: $whitetxt;
+        border: $whiteborder;
     }
     a {
         text-decoration: none;
+    }
+    //For join us
+    .pad-join {
+        @include pad;
+        .container {
+            .card {
+                border: none;
+                justify-content: center;
+                padding: 0;
+            }
+            p {
+                margin-top: -5%;
+                font-size: 20px;
+              span {
+                color: #dfc978;
+                background-color: #444444;
+                font-weight: bold
+              }  
+            }
+        }
+    }
+    //For katastar
+    .pad-katastar {
+        @include pad;
+    }
+    //For about us
+    .pad-about {
+        @include pad;
+        .container {
+            .card {
+                margin-top: 3%;             
+            }
+        }
+    }   
+    //For mc roles 
+    .pad-mc-roles {
+        @include pad;
+        span {
+            background-color: #444444;
+        }
     }
 }
 
 //Footer
 footer {
-   border-top: 1px solid black;
+   border-top: $whiteborder;
    width: 90%;
    margin: 0 auto;
+   position: relative;
+   bottom: 0;
     div {
+        a {
+            text-decoration: none;
+        }
         span {
             color: black;
             margin-right: 20px;
@@ -236,6 +302,57 @@ footer {
     .bi {
         color: black;
     }
+}
+
+//Katastar css
+#katastar {
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+//Darkmode button 
+#dark-mode-button {
+    border: 0;
+    background-color: transparent;
+    color: $whitetxt;
+    animation: HoverZoomOut 0.3s ease;
+} 
+
+#dark-mode-button{
+    animation: HoverZoom 0.3s ease;
+    animation-fill-mode: both;
+}
+
+//Other CSS
+.breathing-animation {
+    animation: Tugging 1.5s ease;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+.breathing-animation:hover {
+    text-decoration: underline;
+}
+
+.div-random-text{
+    height: 10vh;
+    font-family: MinecraftFont, Minecraft, serif;
+}
+
+.div-random-textbf{
+    height: 10vh;
+    font-family: 'Special Elite', system-ui;
+    h5 {
+        font-family: Lora, serif;
+    }
+}
+
+.mc-font-text {
+    font-family: MinecraftFont, Minecraft, serif;
+}
+
+.no-detail-marker {
+    list-style: none; //Remove detail marker from summary 
 }
 
 @import "partials/responsive";

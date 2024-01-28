@@ -1,3 +1,11 @@
+@import url(https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap);
+@import url(https://fonts.cdnfonts.com/css/minecraft-4);
+@import url(https://fonts.googleapis.com/css2?family=Special+Elite&display=swap);
+@font-face {
+  font-family: "MinecraftFont";
+  src: url(font/cyrillic-mojang-font-beta.ttf);
+}
 @keyframes FadeInLoad {
   0% {
     opacity: 0;
@@ -56,6 +64,50 @@
     transform: translateY(0px);
   }
 }
+@keyframes CardHover {
+  0% {
+    background: linear-gradient(to right right, white 0%, transparent 0%) right;
+  }
+  100% {
+    background: linear-gradient(to bottom right, white 50%, transparent 50%) right;
+  }
+}
+@keyframes BreathingXY {
+  0% {
+    transform: scaleX(1);
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleX(1.05);
+    transform: scaleY(1.02);
+  }
+  100% {
+    transform: scaleX(1);
+    transform: scaleY(1);
+  }
+}
+@keyframes BreathingX {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.05);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes Tugging {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
 .dark-mode {
   background-color: #121212;
   color: #fff;
@@ -65,9 +117,15 @@
   background-color: #121212;
   color: #fff;
 }
+.dark-mode .carousel-inner .carousel-item img {
+  filter: brightness(80%);
+}
 .dark-mode .navbar {
   background-color: #121212;
   box-shadow: 0 4px 3px 0px #e2e2e2;
+}
+.dark-mode .navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 .dark-mode .navbar .nav-link {
   color: #fff;
@@ -117,17 +175,48 @@
   color: #fff;
   border: 1px solid white;
 }
+.dark-mode main .container .card a {
+  color: #000;
+}
+.dark-mode main .container .card a:hover {
+  color: #fff;
+}
+.dark-mode main .container .card .card-body .card-text a {
+  color: #fff;
+}
 .dark-mode main .container .card .card-body .btn-primary {
   border: 1px solid white;
   background-color: #fff;
   color: #000;
 }
+.dark-mode main .container .card .card-body .btn-primary:hover {
+  border: 1px solid white;
+  background-color: #121212;
+  color: #fff;
+}
+.dark-mode main .container .card .card-body details summary {
+  padding: 1% 0;
+}
+.dark-mode main .container .card .card-body details a {
+  color: #fff;
+}
+.dark-mode main .pad-join .container p span {
+  background-color: #121212;
+}
+.dark-mode main .pad-mc-roles span {
+  background-color: #121212;
+}
 .dark-mode main #join-button {
   background-color: #fff;
   color: #000;
 }
+.dark-mode main #join-button:hover {
+  background-color: #121212;
+  color: #fff;
+  border: 1px solid white;
+}
 .dark-mode footer {
-  border-top: 1px solid #fff;
+  border-top: 1px solid white;
 }
 .dark-mode footer div span {
   color: #fff;
@@ -257,6 +346,7 @@ body {
   animation: TopBottomLoad 1s ease;
   background-color: #f3f6f4;
   padding: 0 3rem;
+  font-family: Cormorant SC, sans-serif;
 }
 .navbar .navbar-brand img {
   max-width: 15vw;
@@ -326,18 +416,6 @@ body {
   transition: width 150ms linear;
 }
 
-#dark-mode-button {
-  border: 0;
-  background-color: #f3f6f4;
-  color: #000;
-  animation: HoverZoomOut 0.3s ease;
-}
-
-#dark-mode-button {
-  animation: HoverZoom 0.3s ease;
-  animation-fill-mode: both;
-}
-
 .carousel-content {
   position: absolute;
   bottom: 10%;
@@ -347,34 +425,24 @@ body {
 }
 .carousel-content h1 {
   font-size: 5rem;
+  margin-bottom: 3%;
+  color: white;
 }
 .carousel-content h1 span {
   font-style: italic;
 }
 .carousel-content h2 {
   font-size: 5rem;
+  margin-bottom: 3%;
+}
+.carousel-content h2 span {
+  font-style: italic;
 }
 
-main .pad {
-  margin-top: 6%;
-  margin-bottom: -3%;
-}
-main .pad .container .card {
-  border: none;
-  justify-content: center;
-  padding: 0;
-}
-main .pad .container p {
-  margin-top: -5%;
-  font-size: 20px;
-}
-main .pad .container p span {
-  color: #dfc978;
-  background-color: #444444;
-}
 main .main-header {
   text-align: center;
-  padding: 1% 0;
+  padding: 1% 0%;
+  font-weight: bold;
 }
 main .container {
   display: flex;
@@ -391,47 +459,188 @@ main .container .card svg {
   justify-content: center;
   margin: 5% auto;
 }
-main .container .card .card-body span {
+main .container .card a {
+  color: #fff;
+}
+main .container .card a:hover {
+  color: #000;
+}
+main .container .card .card-body .card-title {
+  font-weight: bold;
+}
+main .container .card .card-body .card-text a {
+  color: #000;
+  font-style: italic;
+  text-decoration: underline;
+}
+main .container .card .card-body .card-span {
   font-style: italic;
 }
 main .container .card .card-body .btn-primary {
-  border: 1px solid #000;
+  border: 1px solid black;
   background-color: #000;
   color: #fff;
   animation: HoverZoomOut 0.3s ease;
+  font-weight: bold;
 }
 main .container .card .card-body .btn-primary:hover {
   background-color: #fff;
   color: #000;
-  border: 1px solid #000;
+  border: 1px solid black;
   animation: HoverZoom 0.3s ease;
   animation-fill-mode: both;
 }
 main .container .card .card-body h3 {
   text-align: center;
 }
+main .container .card .card-body details summary {
+  padding: 1% 0;
+}
+main .container .card .card-body details summary:hover {
+  text-decoration: underline;
+}
+main .container .card .card-body details a {
+  color: #000;
+  text-decoration: underline;
+  font-style: italic;
+}
 main .container .card:hover {
   animation: HoverZoom 0.3s ease;
+  background-position: right bottom;
+  animation-fill-mode: both;
+}
+main iframe {
+  animation: BreathingXY 5s ease;
+  animation-iteration-count: infinite;
   animation-fill-mode: both;
 }
 main .splitter {
   width: 50%;
   background-color: #000;
-  margin: 5% auto;
+  margin: 3% auto;
   opacity: 1;
 }
 main #join-button {
-  background-color: #121212;
+  background-color: #000;
   color: #fff;
+  animation: BreathingX 6s ease;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+main #join-button:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid black;
 }
 main a {
   text-decoration: none;
+}
+main .pad-join {
+  margin-top: 8%;
+  margin-bottom: -5%;
+}
+@media only screen and (max-width: 1250px) {
+  main .pad-join {
+    margin-top: 10%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  main .pad-join {
+    margin-top: 7%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  main .pad-join {
+    margin-top: 8%;
+  }
+}
+main .pad-join .container .card {
+  border: none;
+  justify-content: center;
+  padding: 0;
+}
+main .pad-join .container p {
+  margin-top: -5%;
+  font-size: 20px;
+}
+main .pad-join .container p span {
+  color: #dfc978;
+  background-color: #444444;
+  font-weight: bold;
+}
+main .pad-katastar {
+  margin-top: 8%;
+  margin-bottom: -5%;
+}
+@media only screen and (max-width: 1250px) {
+  main .pad-katastar {
+    margin-top: 10%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  main .pad-katastar {
+    margin-top: 7%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  main .pad-katastar {
+    margin-top: 8%;
+  }
+}
+main .pad-about {
+  margin-top: 8%;
+  margin-bottom: -5%;
+}
+@media only screen and (max-width: 1250px) {
+  main .pad-about {
+    margin-top: 10%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  main .pad-about {
+    margin-top: 7%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  main .pad-about {
+    margin-top: 8%;
+  }
+}
+main .pad-about .container .card {
+  margin-top: 3%;
+}
+main .pad-mc-roles {
+  margin-top: 8%;
+  margin-bottom: -5%;
+}
+@media only screen and (max-width: 1250px) {
+  main .pad-mc-roles {
+    margin-top: 10%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  main .pad-mc-roles {
+    margin-top: 7%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  main .pad-mc-roles {
+    margin-top: 8%;
+  }
+}
+main .pad-mc-roles span {
+  background-color: #444444;
 }
 
 footer {
   border-top: 1px solid black;
   width: 90%;
   margin: 0 auto;
+  position: relative;
+  bottom: 0;
+}
+footer div a {
+  text-decoration: none;
 }
 footer div span {
   color: black;
@@ -439,6 +648,55 @@ footer div span {
 }
 footer .bi {
   color: black;
+}
+
+#katastar {
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+
+#dark-mode-button {
+  border: 0;
+  background-color: transparent;
+  color: #000;
+  animation: HoverZoomOut 0.3s ease;
+}
+
+#dark-mode-button {
+  animation: HoverZoom 0.3s ease;
+  animation-fill-mode: both;
+}
+
+.breathing-animation {
+  animation: Tugging 1.5s ease;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+.breathing-animation:hover {
+  text-decoration: underline;
+}
+
+.div-random-text {
+  height: 10vh;
+  font-family: MinecraftFont, Minecraft, serif;
+}
+
+.div-random-textbf {
+  height: 10vh;
+  font-family: "Special Elite", system-ui;
+}
+.div-random-textbf h5 {
+  font-family: Lora, serif;
+}
+
+.mc-font-text {
+  font-family: MinecraftFont, Minecraft, serif;
+}
+
+.no-detail-marker {
+  list-style: none;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -450,6 +708,9 @@ footer .bi {
   }
 }
 @media only screen and (max-width: 992px) {
+  .navbar .navbar-brand img {
+    max-width: 20vw;
+  }
   .navbar #dark-mode-button {
     margin-bottom: 5%;
     margin-left: 2%;
@@ -462,6 +723,12 @@ footer .bi {
   }
   .col-12.col-sm-12.col-md-12.col-lg-6 {
     margin-bottom: 3%;
+  }
+  .col-12.col-lg-4 {
+    margin-top: 3%;
+  }
+  .col-12.col-lg-3 {
+    margin-top: 3%;
   }
 }
 @media only screen and (max-width: 576px) {

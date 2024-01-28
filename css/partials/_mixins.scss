@@ -7,22 +7,17 @@
         $stripe2 2px
     ); 
 }
+//luxury brown \/ /\
+@mixin luxurybrownmodescrollbar {
+    @include background;
+    width: 3px;
+    opacity: 100%;
+}
 
 @mixin scrollbar {
     width: 3px;
     opacity: 100%;
     background-color:$whitenavbar;
-}
-
-@mixin darkmodescrollbart {
-    width: 3px;
-    opacity: 100%;
-}
-
-@mixin luxurybrownmodescrollbar {
-    @include background;
-    width: 3px;
-    opacity: 100%;
 }
 
 @mixin scrollbar-thumb {
@@ -43,4 +38,18 @@
 @mixin underline-hover-after2 {
     width: 100%;
     transition: width 150ms linear;
+}
+
+@mixin pad {
+    margin-top: 8%;
+    margin-bottom: -5%;
+    @media only screen and (max-width:1250px) {
+        margin-top: 10%;
+    }
+    @media only screen and (max-width:992px) {
+        margin-top: 7%;
+    }
+    @media only screen and (max-width:576px) {
+        margin-top: 8%;
+    }  
 }

@@ -6,9 +6,19 @@
         background-color: $darkbg;
         color: $darktxt;
     } 
+    .carousel-inner {
+        .carousel-item {
+            img {
+                filter: brightness(80%);
+            }
+        }
+    }
     .navbar {
         background-color: $darkbg;
         box-shadow: 0 4px 3px 0px #e2e2e2;
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
         .nav-link {
             color: $darktxt;
         }
@@ -50,23 +60,66 @@
             .card {
                 background-color: $darkbg;
                 color: $darktxt;
-                border: 1px solid white;
+                border: $darkborder;
+                a {
+                    color: $whitetxt;
+                }
+                a:hover {
+                    color: $darktxt;
+                }
                 .card-body {
+                    .card-text {
+                        a {
+                            color: $darktxt;
+                        }
+                    }
                     .btn-primary {
-                        border: 1px solid white;
+                        border: $darkborder;
                         background-color: $whitebg;
                         color: $whitetxt;
                     }
+                    .btn-primary:hover {
+                        border: $darkborder;
+                        background-color: $darkbg;
+                        color: $darktxt;  
+                    }
+                    details {
+                        summary {
+                            padding: 1% 0;
+                        }
+                        a {
+                            color: $darktxt;
+                        }
+                    }
                 }
+            }
+        }
+        .pad-join {
+            .container {
+                p {
+                    span {
+                        background-color: $darkbg;
+                    }
+                }
+            }
+        }
+        .pad-mc-roles {
+            span {
+                background-color: $darkbg;
             }
         }
         #join-button {
             background-color: $whitebg;
             color: $whitetxt;
         }
+        #join-button:hover {
+            background-color: $darkbg;
+            color: $darktxt;
+            border: $darkborder;
+        }
     }
     footer {
-        border-top: 1px solid $darktxt;
+        border-top: $darkborder;
         div span {
             color: $darktxt;
         }
