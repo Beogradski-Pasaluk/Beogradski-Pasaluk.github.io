@@ -13,6 +13,7 @@
 
 @media only screen and (max-width:992px) {
     .navbar {
+        padding: 0% 2%;
         .navbar-brand img {
             max-width: 20vw;
         }
@@ -40,6 +41,10 @@
     }
 }
 
+@media only screen and (max-width:768px) {
+
+}
+
 @media only screen and (max-width:576px) {
     .carousel-content {
         h1 {
@@ -48,5 +53,14 @@
         h2 {
             font-size: $sizesm;
         }
+    }
+    .div-random-text {
+        margin: 0% 0% 10% 0%;
+    }
+    .card {
+        animation: none;
+    }
+    .card:hover{
+        animation: none;
     }
 }

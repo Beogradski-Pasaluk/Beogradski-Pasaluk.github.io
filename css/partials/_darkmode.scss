@@ -46,6 +46,10 @@
                 @include underline-hover-after2;
                 background-color: $darktxt;
             }
+            .dropdown-divider {
+                background-color: $darktxt;
+            }
+
         }
     }
     main {

@@ -167,6 +167,9 @@
   transition: width 150ms linear;
   background-color: #fff;
 }
+.dark-mode .navbar .dropdown-menu .dropdown-divider {
+  background-color: #fff;
+}
 .dark-mode main .pad .container span {
   background-color: #121212;
 }
@@ -546,12 +549,19 @@ main .pad-join {
 }
 @media only screen and (max-width: 992px) {
   main .pad-join {
-    margin-top: 7%;
+    margin-top: 10%;
+    margin-bottom: 0%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main .pad-join {
+    margin-bottom: 9%;
   }
 }
 @media only screen and (max-width: 576px) {
   main .pad-join {
-    margin-top: 8%;
+    margin-top: 10%;
+    margin-bottom: 15%;
   }
 }
 main .pad-join .container .card {
@@ -579,12 +589,19 @@ main .pad-katastar {
 }
 @media only screen and (max-width: 992px) {
   main .pad-katastar {
-    margin-top: 7%;
+    margin-top: 10%;
+    margin-bottom: 0%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main .pad-katastar {
+    margin-bottom: 9%;
   }
 }
 @media only screen and (max-width: 576px) {
   main .pad-katastar {
-    margin-top: 8%;
+    margin-top: 10%;
+    margin-bottom: 15%;
   }
 }
 main .pad-about {
@@ -598,12 +615,19 @@ main .pad-about {
 }
 @media only screen and (max-width: 992px) {
   main .pad-about {
-    margin-top: 7%;
+    margin-top: 10%;
+    margin-bottom: 0%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main .pad-about {
+    margin-bottom: 9%;
   }
 }
 @media only screen and (max-width: 576px) {
   main .pad-about {
-    margin-top: 8%;
+    margin-top: 10%;
+    margin-bottom: 15%;
   }
 }
 main .pad-about .container .card {
@@ -620,12 +644,19 @@ main .pad-mc-roles {
 }
 @media only screen and (max-width: 992px) {
   main .pad-mc-roles {
-    margin-top: 7%;
+    margin-top: 10%;
+    margin-bottom: 0%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main .pad-mc-roles {
+    margin-bottom: 9%;
   }
 }
 @media only screen and (max-width: 576px) {
   main .pad-mc-roles {
-    margin-top: 8%;
+    margin-top: 10%;
+    margin-bottom: 15%;
   }
 }
 main .pad-mc-roles span {
@@ -708,6 +739,9 @@ footer .bi {
   }
 }
 @media only screen and (max-width: 992px) {
+  .navbar {
+    padding: 0% 2%;
+  }
   .navbar .navbar-brand img {
     max-width: 20vw;
   }
@@ -737,5 +771,14 @@ footer .bi {
   }
   .carousel-content h2 {
     font-size: 2rem;
+  }
+  .div-random-text {
+    margin: 0% 0% 10% 0%;
+  }
+  .card {
+    animation: none;
+  }
+  .card:hover {
+    animation: none;
   }
 }/*# sourceMappingURL=style.css.map */

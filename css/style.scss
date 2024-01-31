@@ -75,6 +75,9 @@ body {
     }
     .nav-link {
         animation: HoverZoomOut 0.3s ease;
+        // img {
+        //     width: 10%;
+        // }
     }
     .nav-link:hover {
         animation: HoverZoom 150ms ease;
