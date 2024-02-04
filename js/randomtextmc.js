@@ -2,9 +2,9 @@
 function RandomText() {
     const RandText = [
         "<span style='color:#AAAAAA'>Београде збогом ово ти још нисам рекао</span>",
-        "<span style='color:#AAAAAA'>Београдом крв ће лити <br> геј параде неће бити</span>",
+        "<span style='color:#AAAAAA'>Београдом крв ће лити, геј параде неће бити</span>",
         "<span style='color:#AAAAAA'>Од сада и на</span> <span style='color:#FFFF55; font-weight:bold'>Косову</span> <span style='color:#AAAAAA'>:D</span>",
-        "<span style='color:#AAAAAA'>Заједно смо лепши, заједно смо јачи <br>То другарство значи</span>",
+        "<span style='color:#AAAAAA'>Заједно смо лепши, заједно смо јачи. То другарство значи</span>",
         "<span style='color:#AAAAAA'>Од сада са <span style='color:#AAAAAA; font-weight:bold'>10% мање</span> <span style='color:#AAAAAA'>глутена</span>",
         "<span style='color:#AAAAAA'>Кад ти неко каже <span style='color:#fff'>'хало'</span> <span style='color:#AAAAAA'>реци</span> <span style='color:#fff'>'јебем те мало'</span>",
         "<span style='color:#AAAAAA'>Кад ти неко каже <span style='color:#fff'>'дорбо вече'</span> <span style='color:#AAAAAA'>реци</span> <span style='color:#fff'>'мој ти га испече'</span>",
@@ -16,5 +16,5 @@ function RandomText() {
     el = document.querySelector('.random-text')
     el.innerHTML = RandText[RNG];
   }
-setInterval(RandomText, 3100);
+setInterval(RandomText, 3500);
 

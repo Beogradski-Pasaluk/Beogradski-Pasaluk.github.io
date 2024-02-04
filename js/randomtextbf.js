@@ -10,4 +10,4 @@ function RandomText() {
     el = document.querySelector('.random-textbf')
     el.innerHTML = RandText[RNG];
   }
-setInterval(RandomText, 3100);
+setInterval(RandomText, 3500);

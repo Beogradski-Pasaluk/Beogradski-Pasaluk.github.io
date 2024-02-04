@@ -66,10 +66,10 @@
 }
 @keyframes CardHover {
   0% {
-    background: linear-gradient(to right right, white 0%, transparent 0%) right;
+    background: linear-gradient(to top left, transparent 0%, rgba(255, 255, 255, 0.1019607843) 0%) left;
   }
   100% {
-    background: linear-gradient(to bottom right, white 50%, transparent 50%) right;
+    background: linear-gradient(to top left, transparent 10%, rgba(255, 255, 255, 0.1019607843) 100%) center;
   }
 }
 @keyframes BreathingXY {
@@ -145,6 +145,7 @@
 }
 .dark-mode .navbar .dropdown-menu {
   background-color: #121212;
+  border: 1px solid white;
 }
 .dark-mode .navbar .dropdown-menu .dropdown-item {
   color: #fff;
@@ -226,80 +227,6 @@
 }
 .dark-mode footer .bi {
   fill: #fff;
-}
-
-.luxury-brown-mode {
-  background: repeating-linear-gradient(45deg, #2F1B12, #2F1B12 1px, #52341e 2px, #52341e 2px);
-  color: #e7dab2;
-}
-.luxury-brown-mode #dark-mode-button {
-  border: 0;
-  background: repeating-linear-gradient(45deg, #2F1B12, #2F1B12 1px, #52341e 2px, #52341e 2px);
-  color: #e7dab2;
-}
-.luxury-brown-mode .navbar {
-  background: repeating-linear-gradient(45deg, #2F1B12, #2F1B12 1px, #52341e 2px, #52341e 2px);
-}
-.luxury-brown-mode .navbar .nav-link {
-  color: #e7dab2;
-}
-.luxury-brown-mode .navbar .nav-link::after {
-  content: "";
-  width: 0;
-  height: 2px;
-  background-color: black;
-  margin: auto;
-  display: block;
-  background-color: #e7dab2;
-}
-.luxury-brown-mode .navbar .nav-link:hover::after {
-  width: 100%;
-  transition: width 150ms linear;
-}
-.luxury-brown-mode .navbar .dropdown-menu {
-  background-color: #121212;
-}
-.luxury-brown-mode .navbar .dropdown-menu .dropdown-item {
-  color: #e7dab2;
-}
-.luxury-brown-mode .navbar .dropdown-menu .dropdown-item:hover {
-  background-color: #444444;
-}
-.luxury-brown-mode .navbar .dropdown-menu .dropdown-item::after {
-  content: "";
-  width: 0;
-  height: 2px;
-  background-color: black;
-  margin: auto;
-  display: block;
-  background-color: #e7dab2;
-}
-.luxury-brown-mode .navbar .dropdown-menu .dropdown-item:hover::after {
-  width: 100%;
-  transition: width 150ms linear;
-  background-color: #e7dab2;
-}
-.luxury-brown-mode main .main-header {
-  text-align: center;
-  padding: 1% 0;
-  color: #e7dab2;
-}
-.luxury-brown-mode main .row .col .card {
-  width: 100%;
-  color: #e7dab2;
-}
-.luxury-brown-mode main .row .col .card .card-body span {
-  font-style: italic;
-  color: #e7dab2;
-}
-.luxury-brown-mode footer {
-  border-top: 1px solid #e7dab2;
-}
-.luxury-brown-mode footer div span {
-  color: #e7dab2;
-}
-.luxury-brown-mode footer .bi-discord {
-  fill: #e7dab2;
 }
 
 * {
@@ -399,6 +326,7 @@ body {
 }
 .navbar .dropdown-menu {
   animation: DropDownLoad 0.3s ease;
+  border: 1px solid black;
 }
 .navbar .dropdown-menu .dropdown-item {
   font-size: 1.2rem;
@@ -509,7 +437,6 @@ main .container .card .card-body details a {
 }
 main .container .card:hover {
   animation: HoverZoom 0.3s ease;
-  background-position: right bottom;
   animation-fill-mode: both;
 }
 main iframe {
@@ -687,18 +614,6 @@ footer .bi {
   margin: 0 auto;
 }
 
-#dark-mode-button {
-  border: 0;
-  background-color: transparent;
-  color: #000;
-  animation: HoverZoomOut 0.3s ease;
-}
-
-#dark-mode-button {
-  animation: HoverZoom 0.3s ease;
-  animation-fill-mode: both;
-}
-
 .breathing-animation {
   animation: Tugging 1.5s ease;
   animation-fill-mode: both;
@@ -728,6 +643,10 @@ footer .bi {
 
 .no-detail-marker {
   list-style: none;
+}
+
+i.fa-solid {
+  padding: 15px;
 }
 
 @media only screen and (max-width: 1200px) {

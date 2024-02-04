@@ -12,7 +12,6 @@
 @import "partials/animations";
 @import "partials/mixins";
 @import "partials/darkmode";
-@import "partials/luxurybrownmode";
 
 * {
     padding: 0;
@@ -101,6 +100,7 @@ body {
     }
     .dropdown-menu {
             animation: DropDownLoad 0.3s ease;
+            border: $whiteborder;
         .dropdown-item {
             font-size: 1.2rem;
         }
@@ -214,7 +214,6 @@ main {
         }
         .card:hover {
             animation: HoverZoom 0.3s ease;
-            background-position:right bottom;
             animation-fill-mode: both;
         }
     }
@@ -314,19 +313,6 @@ footer {
     margin: 0 auto;
 }
 
-//Darkmode button 
-#dark-mode-button {
-    border: 0;
-    background-color: transparent;
-    color: $whitetxt;
-    animation: HoverZoomOut 0.3s ease;
-} 
-
-#dark-mode-button{
-    animation: HoverZoom 0.3s ease;
-    animation-fill-mode: both;
-}
-
 //Other CSS
 .breathing-animation {
     animation: Tugging 1.5s ease;
@@ -356,6 +342,10 @@ footer {
 
 .no-detail-marker {
     list-style: none; //Remove detail marker from summary 
+}
+
+i.fa-solid {
+    padding: 15px;
 }
 
 @import "partials/responsive";

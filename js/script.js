@@ -1,5 +1,7 @@
 //Darkmode switch
-function DarkMode() {
+function DarkModeChange(x){
+  x.classList.toggle("fa-moon");
+  x.classList.toggle("fa-sun");
   var darkbody = document.body;
   darkbody.classList.toggle("dark-mode");  
   localStorage.setItem('darkMode', darkbody.classList.contains('dark-mode'));//fills up localstorage with the value
@@ -16,17 +18,6 @@ if (darkMode==='true') {
   icon.classList.add("fa-moon");
   icon.classList.remove("fa-sun");
 }
-
-function DarkModeChange(x){
-  x.classList.toggle("fa-moon");
-  x.classList.toggle("fa-sun");
-}
-
-//Luxury brown switch
-// function LuxuryBrownMode() {
-//   var element = document.body;
-//   element.classList.toggle("luxury-brown-mode");
-// }
 
 //Auto Hide Navbar
 document.addEventListener("DOMContentLoaded", function(){

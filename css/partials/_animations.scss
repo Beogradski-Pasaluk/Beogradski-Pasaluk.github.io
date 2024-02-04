@@ -45,11 +45,9 @@
 
 //Card hover
 @keyframes CardHover {
-    0% {background: linear-gradient(to right right, white 0%, transparent 0%) right;
-
+    0% {background: linear-gradient(to top left, transparent 0%, #ffffff1a 0%) left;
     }
-    100% {
-        background: linear-gradient(to bottom right, white 50%, transparent 50%) right;
+    100% {background: linear-gradient(to top left, transparent 10%, #ffffff1a 100%) center;
     }
 }
 
