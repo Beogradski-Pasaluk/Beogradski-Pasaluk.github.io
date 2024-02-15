@@ -228,6 +228,9 @@
 .dark-mode footer .bi {
   fill: #fff;
 }
+.dark-mode #ToolTip span {
+  background-color: #121212;
+}
 
 * {
   padding: 0;
@@ -531,6 +534,9 @@ main .pad-katastar {
     margin-bottom: 15%;
   }
 }
+main .pad-katastar .form-check-label {
+  font-weight: bold;
+}
 main .pad-about {
   margin-top: 8%;
   margin-bottom: -5%;
@@ -608,12 +614,6 @@ footer .bi {
   color: black;
 }
 
-#katastar {
-  max-width: 90%;
-  height: auto;
-  margin: 0 auto;
-}
-
 .breathing-animation {
   animation: Tugging 1.5s ease;
   animation-fill-mode: both;
@@ -647,6 +647,96 @@ footer .bi {
 
 i.fa-solid {
   padding: 15px;
+}
+
+.no-hover {
+  animation: none !important;
+}
+
+#KatastarIMG {
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.form-check-input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #121212;
+  padding: 0;
+  box-shadow: none;
+}
+.form-check-input[type=radio]:checked {
+  border-color: #fff;
+}
+
+#ToolTip span {
+  background-color: #121212;
+}
+
+Mods {
+  width: 100%;
+  background-color: #121212;
+  text-align: center;
+  font-family: Lora, serif;
+}
+Mods Header {
+  width: 80%;
+  margin: 0.3% auto;
+  display: block;
+  background-color: #121212;
+  border: 1px solid white;
+  font-size: 42px;
+  color: white;
+  background-color: #444444;
+  font-weight: bold;
+}
+Mods Mod Libs-And-API {
+  width: 80%;
+  margin: 0.3% auto;
+  display: block;
+  background-color: #121212;
+  border: 1px solid white;
+}
+Mods Mod Optimization {
+  width: 80%;
+  margin: 0.3% auto;
+  display: block;
+  background-color: #121212;
+  border: 1px solid white;
+}
+Mods Mod Visual {
+  width: 80%;
+  margin: 0.3% auto;
+  display: block;
+  background-color: #121212;
+  border: 1px solid white;
+}
+Mods Mod QOL {
+  width: 80%;
+  margin: 0.3% auto;
+  display: block;
+  background-color: #121212;
+  border: 1px solid white;
+}
+Mods Mod Other {
+  width: 80%;
+  margin: 0.3% auto;
+  display: block;
+  background-color: #121212;
+  border: 1px solid white;
+}
+Mods Title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 60px;
+  text-decoration: underline;
+}
+Mods Name {
+  display: block;
+  color: #fff;
 }
 
 @media only screen and (max-width: 1200px) {

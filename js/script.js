@@ -1,13 +1,15 @@
+//
 //Darkmode switch
+//
 function DarkModeChange(x){
   x.classList.toggle("fa-moon");
   x.classList.toggle("fa-sun");
   var darkbody = document.body;
   darkbody.classList.toggle("dark-mode");  
-  localStorage.setItem('darkMode', darkbody.classList.contains('dark-mode'));//fills up localstorage with the value
+  localStorage.setItem('darkMode', darkbody.classList.contains('dark-mode'));
 }
 
-const darkMode = localStorage.getItem('darkMode');//Localstorage for darkmode - Remembers the selected choice for next time
+const darkMode = localStorage.getItem('darkMode');
 var icon = document.querySelector(".fa-solid");
 if (darkMode==='true') {
   document.body.classList.add("dark-mode");
@@ -18,6 +20,26 @@ if (darkMode==='true') {
   icon.classList.add("fa-moon");
   icon.classList.remove("fa-sun");
 }
+
+//
+//English switch 
+//
+// function EnglishModeChange(x){
+//   document.body.classList.toggle("english")
+//   localStorage.setItem('EngMode', document.body.classList.contains('english'));
+// }
+
+// var url = window.location.pathname;
+// var filename = url.substring(url.lastIndexOf('/')+1);
+// const EngMode = localStorage.getItem('EngMode');
+
+// if (EngMode==='true') {
+//   location.href = "ENIndex.html"
+//   document.body.classList.add("english");
+// } else {
+//   document.body.classList.remove("english");
+// }
+// localStorage.removeItem(EngMode);
 
 //Auto Hide Navbar
 document.addEventListener("DOMContentLoaded", function(){
@@ -165,3 +187,12 @@ document.querySelectorAll('details').forEach((el) => {
 //
 // End of script for scrolling details element
 //
+
+
+
+
+
+
+
+
+

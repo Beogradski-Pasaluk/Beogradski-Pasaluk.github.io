@@ -58,3 +58,17 @@
         margin-bottom: 15%;
     }  
 }
+
+//
+//XML styling
+//
+
+@mixin display {
+    width: 80%;
+    margin: 0.3% auto;
+    display: block;
+    background-color: $darkbg;
+    border: $darkborder;
+}
+
+//End XML Styling

@@ -15,9 +15,14 @@
     <meta name="keywords" content="катастар, Пашалук">
     <meta name="description" content="Катастар Београдског Пашалука">
     <meta name="copyright" content="Београдски Пашалук 2024">
-    <meta name="abstract" content="Land distribution in Pasaluk">
+    <meta name="abstract" content="Подела земље на Пашалуку">
     <meta name="language" content="serbian">
     <meta name="robots" content="index, follow">
+    <meta name='apple-mobile-web-app-capable' content='yes'/>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+	<meta http-equiv='Content-Language' content='sr-Cyrl'/>
+	<meta http-equiv='ImageToolbar' content='No'/>
+	<meta name='Rating' content='General'/>
     <!--Discord related meta tags-->
     <meta content="Београдски Пашалук - Катастар" property="og:title" />
     <meta content="Катастар Београдског Пашалука" property="og:description" />
@@ -84,16 +89,46 @@
         <!--Main begin-->
         <main>
             <div class="pad-katastar">
-                <h1 class="main-header">Сервис катастра је и даље у изради, молимо за мало стрпљења.</h1>
+                <h1 class="main-header">Катастар Београдског Пашалука</h1>
+                <div class="alert alert-warning align-items-center" role="alert" style="text-align: center;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>                    
+                    </svg>
+                    <div>
+                        Сервис катастра је и даље у изради, молимо за мало стрпљења. У међувремену, ове слике служе као катастар. <br>
+                        <strong>Учитавање слика може бити споро у зависности од вашег интернета.</strong> <br>
+                        Проблеми са страницом су очекивани. Све проблеме пријавите MaksiWWGaming на Discord-y или поднесите пријаву преко Github-а.
+                    </div>
+                  </div>
+                  <br>
                 <p class="text-center">
-                    У међувремену, ова слика служи као катастар.<br><br><br>
-                    <span style="color: yellow; background-color: #444;"><strong>Жута боја</strong></span> означава регулисану зону државног власништва.<br>
-                    <strong>Бела боја</strong> означава државно власништво.<br>
+                    Све што није означено захтева одобрење грађевинске дозволе од стране државе.
+                    <br>
+                    Градња без претходно одобрене дозволе <u><strong>ће бити санкционисана</u></strong> и држава задржава право на <strong><u>уклањање грађевине.</u></strong>
                 </p>
-                <img id="katastar" src="../../img/Pages/Katastar/2023-11-29_20.22.36_x-2048_z-2048.png" class="d-block text-center" alt="Слика катастра Пашалука">
-                <p class="text-center"><i>Мапа катастра се ажурира сваког 1. и 15. у месецу</i></p>
-                <br>
-                <p class="text-center"><strong>Ова страница и даље није готова, тако да су проблеми са коришћењем очекиван. Све проблеме пријавите MaksiWWGaming на Discordu.</strong></p>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <input class="form-check-input" type="radio" name="Katastar" id="KatastarEmpty" onclick="DisplayMap('0')">
+                        <label class="form-check-label" for="KatastarEmpty">Празна мапа</label>
+                        <br>
+                        <input class="form-check-input" type="radio" name="Katastar" id="KatastarDrawn" checked onclick="DisplayMap('1')">
+                        <label class="form-check-label" for="KatastarDrawn">Исцртана мапа</label>
+                        <br>
+                        <input class="form-check-input" type="radio" name="Katastar" id="KatastarKvadrant" onclick="DisplayMap('2')">
+                        <label class="form-check-label" for="KatastarKvadrant">Квадрант мапа</label>
+                        <br>
+                    </div>
+                    <div class="col-12">
+                        <p class="text-center visible" id="ToolTip">
+                            <span style='color: yellow;'><strong>Жута боја</strong></span> означава регулисану зону државног власништва.<br>
+                            <strong>Бела боја</strong> означава државно власништво.<br>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <img id="KatastarIMG" src="../../img/Pages/Katastar/drawnmap.png" class="d-block text-center" alt="Слика катастра Пашалука">
+                    <p class="text-center"><i>Мапа катастра се ажурира сваког 1. и 15. у месецу</i></p>
+                </div>
                 <div style="padding-bottom: 5%;"></div>
             </div>
         </main>
@@ -121,5 +156,7 @@
     </div>
     <!--My script-->
     <script src="../../js/script.js"></script>
+    <script src="../../js/katastar.js"></script>
+
 </body>
 </html>

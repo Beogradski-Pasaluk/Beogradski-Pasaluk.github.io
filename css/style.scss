@@ -266,6 +266,9 @@ main {
     //For katastar
     .pad-katastar {
         @include pad;
+        .form-check-label {
+            font-weight: bold;
+        }
     }
     //For about us
     .pad-about {
@@ -306,14 +309,10 @@ footer {
     }
 }
 
-//Katastar css
-#katastar {
-    max-width: 90%;
-    height: auto;
-    margin: 0 auto;
-}
-
+//
 //Other CSS
+//
+
 .breathing-animation {
     animation: Tugging 1.5s ease;
     animation-fill-mode: both;
@@ -347,5 +346,82 @@ footer {
 i.fa-solid {
     padding: 15px;
 }
+
+.no-hover { //removes hover animation on cards
+    animation: none !important;
+}
+
+//
+//Katastar CSS
+//
+
+#KatastarIMG {
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.form-check-input[type="radio"] {
+    appearance: none;
+    background-color: $darkbg;
+    padding: 0;
+    box-shadow: none;
+    &:checked  {
+        border-color: $darktxt;
+    }
+}
+
+#ToolTip {
+    span {
+        background-color: $darkbg;
+    }
+}
+
+//
+//XML Style
+//
+Mods {
+    width: 100%;
+    background-color: $darkbg;
+    text-align: center;
+    font-family: Lora, serif;
+    Header {
+        @include display;
+        font-size: 42px;
+        color: white;
+        background-color: $darklinkhover;
+        font-weight: bold;
+    }
+    Mod {
+        Libs-And-API {
+            @include display;
+        }
+        Optimization {
+            @include display;
+        }
+        Visual {
+            @include display;
+        }
+        QOL {
+            @include display;
+        }
+        Other {
+            @include display;
+        }
+    }
+    Title {
+        color: $darktxt;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 60px;
+        text-decoration: underline;
+    }
+    Name {
+        display: block;
+        color: $whitebg;
+    }
+}
+
+//End XML Styling
 
 @import "partials/responsive";
