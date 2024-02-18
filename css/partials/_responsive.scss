@@ -42,7 +42,9 @@
 }
 
 @media only screen and (max-width:768px) {
-
+    .col-12.col-md-6.col-lg-5 {//cards around changing text
+        margin: 1%;
+    }
 }
 
 @media only screen and (max-width:576px) {

@@ -187,12 +187,3 @@ document.querySelectorAll('details').forEach((el) => {
 //
 // End of script for scrolling details element
 //
-
-
-
-
-
-
-
-
-
