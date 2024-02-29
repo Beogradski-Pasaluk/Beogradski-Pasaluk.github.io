@@ -21,26 +21,6 @@ if (darkMode==='true') {
   icon.classList.remove("fa-sun");
 }
 
-//
-//English switch 
-//
-// function EnglishModeChange(x){
-//   document.body.classList.toggle("english")
-//   localStorage.setItem('EngMode', document.body.classList.contains('english'));
-// }
-
-// var url = window.location.pathname;
-// var filename = url.substring(url.lastIndexOf('/')+1);
-// const EngMode = localStorage.getItem('EngMode');
-
-// if (EngMode==='true') {
-//   location.href = "ENIndex.html"
-//   document.body.classList.add("english");
-// } else {
-//   document.body.classList.remove("english");
-// }
-// localStorage.removeItem(EngMode);
-
 //Auto Hide Navbar
 document.addEventListener("DOMContentLoaded", function(){
     el_autohide = document.querySelector('.autohide');

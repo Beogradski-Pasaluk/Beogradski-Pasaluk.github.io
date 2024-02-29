@@ -90,85 +90,115 @@
             <div class="pad-mc-roles">
                 <h1 class="main-header">Рангови на Пашалуку</h1>
                     <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card text-center no-hover">
-                                    <div class="card-body">
-                                        <h5 class="card-title"></h5>
-                                        <p class="card-text">Упознај се са свим ранговима на Пашалуку</p>
+                        <div class="table-responsive table-ranks">
+                            <table class="table table-striped text-successtable-border border-light mc-font-text">
+                              <thead class="border-light">
+                                <tr>
+                                  <th scope="col">Дозволе</th>
+                                  <th scope="col" style="color: #00AA00; font-size: 1.3rem; font-weight: bold;">Раја</th>
+                                  <th scope="col" style="color: #55FFFF; font-size: 1.3rem; font-weight: bold;">Везир</th>
+                                  <th scope="col" style="color: #FFFF55; font-size: 1.3rem; font-weight: bold;" id="thPasa">Паша</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <th scope="row">/sleep</th>
+                                    <td><i class="fas fa-check text-success"></i></td>
+                                    <td><i class="fas fa-check text-success"></i></td>
+                                    <td><i class="fas fa-check text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">/msg</th>
+                                    <td><i class="fas fa-check text-success"></i></td>
+                                    <td><i class="fas fa-check text-success"></i></td>
+                                    <td><i class="fas fa-check text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
                                         <details>
-                                            <summary class="card-title mc-font-text" style="color: #00AA00; font-size: 1.3rem;">
-                                               Раја
+                                            <summary>
+                                               Радне станице 
                                             </summary>
                                             <div class="details-content">
                                                 <p class="card-text">
-                                                    /sleep<br>/enderchest<br>/workbench<br>/stonecutter<br>
+                                                    /enderchest<br>/workbench<br>/stonecutter<br>
                                                     /anvil<br>/smithingtable<br>/loom<br>/grindstone<br>/cartography</p>
-                                                <hr>
                                             </div>
                                         </details>
+                                    </th>
+                                    <td><i class="fas fa-check text-success"></i></td>
+                                    <td><i class="fas fa-check text-success"></i></td>
+                                    <td><i class="fas fa-check text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
                                         <details>
-                                            <summary class="card-title mc-font-text" style="color: #55FFFF; font-size: 1.3rem;">
-                                                Везир
+                                            <summary>
+                                                /fly
                                             </summary>
                                             <div class="details-content">
                                                 <p class="card-text">
-                                                    /sleep<br>/enderchest<br>/workbench<br>/stonecutter<br>
-                                                    /anvil<br>/smithingtable<br>/loom<br>/grindstone<br>/cartography
-                                                </p>
-                                                <hr class="splitter">
-                                                <p class="card-text">
-                                                    /fly<br>/gamemode spectator <i>(F3+N)</i><br>/tp<br>
-                                                    /effect<br>/weather<br><i>debug stick</i>
-                                                </p>
-                                                <hr>
+                                                    Специјална дозвола преко<br>
+                                                    <span style="color: #AAA;">FlyPerm</span>
                                             </div>
                                         </details>
+                                  <td><i class="fas fa-times text-danger"></i></td>
+                                  <td><i class="fas fa-check text-success"></i></td>
+                                  <td><i class="fas fa-check text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
                                         <details>
-                                            <summary class="card-title mc-font-text" style="color: #FFFF55; font-size: 1.3rem;">
-                                                Паша
+                                            <summary>
+                                                /gamemode spectator <i>( F3 + N )</i>
                                             </summary>
                                             <div class="details-content">
                                                 <p class="card-text">
-                                                    /sleep<br>/enderchest<br>/workbench<br>/stonecutter<br>
-                                                    /anvil<br>/smithingtable<br>/loom<br>/grindstone<br>/cartography
-                                                </p>
-                                                <hr class="splitter">
-                                                <p class="card-text">
-                                                    /fly<br>/gamemode spectator <i>(F3+N)</i><br>/tp<br>
-                                                    /effect<br>/weather<br><i>debug stick</i>
-                                                </p>
-                                                <hr class="splitter">
-                                                <p class="card-text">
-                                                    <b><i>ИСКЉУЧИВО OPs!</i></b>
-                                                </p>
-                                                <hr>
+                                                    Специјална дозвола преко<br>
+                                                    <span style="color: #AAA;">SpecPerm</span>
                                             </div>
                                         </details>
-                                        <details>
-                                            <summary class="card-title mc-font-text" style="color: #AAAAAA; font-size: 1.3rem;">
-                                                Додатне дозволе
-                                            </summary>
-                                            <div class="details-content">
-                                                <h6 class="card-text mc-font-text" style="color: #AAAAAA;">WE Perm</h6>
-                                                <p class="card-text">Word edit команде</p>
-                                                <hr class="splitter">
-                                                <h6 class="card-text mc-font-text" style="color: #AAAAAA;">Spec Perm</h6>
-                                                <p class="card-text">/gamemode spectator</p>
-                                                <hr class="splitter">
-                                                <h6 class="card-text mc-font-text" style="color: #AAAAAA;">Fly Perm</h6>
-                                                <p class="card-text">/fly</p>
-                                                <hr class="splitter">
-                                                <b><i>Ове дозволе су привремене!</i></b>
-                                            </div>
-                                        </details>
-                                    </div>
-                                </div>
-                            </div>
+                                    <td><i class="fas fa-times text-danger"></i></td>
+                                    <td><i class="fas fa-check text-success"></i></td>
+                                    <td><i class="fas fa-check text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">/tp</th>
+                                    <td><i class="fas fa-times text-danger"></i></td>
+                                    <td><i class="fas fa-check text-success"></i></td>
+                                    <td><i class="fas fa-check text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">/effect</th>
+                                    <td><i class="fas fa-times text-danger"></i></td>
+                                    <td><i class="fas fa-check text-success"></i></td>
+                                    <td><i class="fas fa-check text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">/weather</th>
+                                    <td><i class="fas fa-times text-danger"></i></td>
+                                    <td><i class="fas fa-check text-success"></i></td>
+                                    <td><i class="fas fa-check text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><i>debug stick</i></th>
+                                    <td><i class="fas fa-times text-danger"></i></td>
+                                    <td><i class="fas fa-check text-success"></i></td>
+                                    <td><i class="fas fa-check text-success"></i></td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">Оператор команде</th>
+                                  <td><i class="fas fa-times text-danger"></i></td>
+                                  <td><i class="fas fa-times text-danger"></i></td>
+                                  <td><i class="fas fa-check text-success"></i></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <p class="text-center">Ранг се заради трудом на Пашалуку, молбом нећете добити ништа.</p>
+                          </div>
                         </div>
-                    </div>
             </div>
-            <div style="padding-bottom: 15%;"></div>
+            <div style="padding-bottom: 2%;"></div>
         </main>
         <!--Main end-->
 

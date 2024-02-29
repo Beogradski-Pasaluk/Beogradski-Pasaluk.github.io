@@ -207,7 +207,18 @@
 .dark-mode main .pad-join .container p span {
   background-color: #121212;
 }
-.dark-mode main .pad-mc-roles span {
+.dark-mode main .pad-mc-roles table {
+  border: 1px solid black;
+}
+.dark-mode main .pad-mc-roles table thead tr th {
+  color: #fff;
+  background-color: #121212;
+}
+.dark-mode main .pad-mc-roles table tbody tr th {
+  color: #fff;
+  background-color: #121212;
+}
+.dark-mode main .pad-mc-roles table tbody tr td {
   background-color: #121212;
 }
 .dark-mode main #join-button {
@@ -219,6 +230,89 @@
   color: #fff;
   border: 1px solid white;
 }
+.dark-mode main .pad-katastar {
+  margin-top: 8%;
+  margin-bottom: -5%;
+}
+@media only screen and (max-width: 1250px) {
+  .dark-mode main .pad-katastar {
+    margin-top: 10%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .dark-mode main .pad-katastar {
+    margin-top: 10%;
+    margin-bottom: 0%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .dark-mode main .pad-katastar {
+    margin-bottom: 9%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .dark-mode main .pad-katastar {
+    margin-top: 10%;
+    margin-bottom: 15%;
+  }
+}
+.dark-mode main .pad-katastar .form-check-label {
+  font-weight: bold;
+}
+.dark-mode main .pad-katastar hr {
+  color: #fff;
+}
+.dark-mode main .pad-katastar #KatastarChoice button {
+  background-color: #121212;
+  color: #fff;
+}
+.dark-mode main .pad-katastar #KatastarChoice .active {
+  font-weight: bold !important;
+}
+.dark-mode main .pad-katastar #KatastarChoice .dropdown-item.active {
+  background-color: #f3f6f4;
+  color: #000;
+}
+.dark-mode main .pad-katastar #KatastarChoice .dropdown-menu {
+  border: 1px solid white;
+  background-color: #121212;
+}
+.dark-mode main .pad-katastar #KatastarChoice .dropdown-menu .dropdown-item {
+  font-size: 1rem;
+  color: #fff;
+}
+.dark-mode main .pad-katastar #KatastarChoice .dropdown-menu .dropdown-item:hover {
+  background-color: #444444;
+}
+.dark-mode main .pad-katastar #KatastarChoice .dropdown-menu .dropdown-item::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: black;
+  margin: auto;
+  display: block;
+  background-color: #fff;
+}
+.dark-mode main .pad-katastar #KatastarChoice .dropdown-menu .dropdown-item:hover::after {
+  width: 100%;
+  transition: width 150ms linear;
+  background-color: #fff;
+}
+.dark-mode main .pad-katastar #KatastarChoice .dropdown-menu .dropdown-divider {
+  background-color: #fff;
+}
+.dark-mode main .pad-katastar #KatastarMapChoice button {
+  background-color: #121212;
+  color: #fff;
+  border: 1px solid white;
+}
+.dark-mode main .pad-katastar #KatastarMapChoice button:hover {
+  animation: HoverZoom 300ms ease;
+  animation-fill-mode: both;
+}
+.dark-mode main .pad-katastar #ToolTip span {
+  background-color: #121212;
+}
 .dark-mode footer {
   border-top: 1px solid white;
 }
@@ -228,8 +322,14 @@
 .dark-mode footer .bi {
   fill: #fff;
 }
-.dark-mode #ToolTip span {
-  background-color: #121212;
+.dark-mode .separator {
+  color: #fff;
+}
+.dark-mode .separator::before,
+.dark-mode .separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid white;
 }
 
 * {
@@ -252,6 +352,7 @@ body {
 
 ::-webkit-scrollbar {
   width: 3px;
+  height: 3px;
   opacity: 100%;
   background-color: #f3f6f4;
 }
@@ -264,6 +365,7 @@ body {
 
 ::-moz-scrollbar {
   width: 3px;
+  height: 3px;
   opacity: 100%;
   background-color: #f3f6f4;
 }
@@ -537,6 +639,84 @@ main .pad-katastar {
 main .pad-katastar .form-check-label {
   font-weight: bold;
 }
+main .pad-katastar .form-check-input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #121212;
+  padding: 0;
+  box-shadow: none;
+}
+main .pad-katastar .form-check-input[type=checkbox]:checked {
+  border-color: #fff;
+}
+main .pad-katastar #ToolTip span {
+  background-color: #121212;
+}
+main .pad-katastar #KatastarChoice button {
+  background-color: #fff;
+  color: #000;
+}
+main .pad-katastar #KatastarChoice .active {
+  font-weight: bold !important;
+}
+main .pad-katastar #KatastarChoice .dropdown-item.active {
+  background-color: #f3f6f4;
+  color: #000;
+}
+main .pad-katastar #KatastarChoice .dropdown-menu {
+  animation: FadeInLoad 0.2s ease;
+  animation-fill-mode: both;
+  border: 1px solid black;
+}
+main .pad-katastar #KatastarChoice .dropdown-menu .dropdown-item {
+  font-size: 1rem;
+}
+main .pad-katastar #KatastarChoice .dropdown-menu .dropdown-item:hover {
+  background-color: #eeeeee;
+}
+main .pad-katastar #KatastarChoice .dropdown-menu .dropdown-item::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: black;
+  margin: auto;
+  display: block;
+}
+main .pad-katastar #KatastarChoice .dropdown-menu .dropdown-item:hover::after {
+  width: 100%;
+  transition: width 150ms linear;
+}
+main .pad-katastar #KatastarChoice .dropdown-menu .dropdown-divider {
+  background-color: #000;
+  width: 80%;
+  margin: 0 auto;
+}
+main .pad-katastar #KatastarMapChoice button {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid black;
+}
+main .pad-katastar #KatastarMapChoice button:hover {
+  animation: HoverZoom 300ms ease;
+  animation-fill-mode: both;
+}
+main .pad-katastar #KatastarIMGMapBlock {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+main .pad-katastar #KatastarIMGMapBlock #KatastarIMG {
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+main .pad-katastar #KatastarInteractMap {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  font-family: Lora, serif;
+}
 main .pad-about {
   margin-top: 8%;
   margin-bottom: -5%;
@@ -567,6 +747,7 @@ main .pad-about .container .card {
   margin-top: 3%;
 }
 main .pad-mc-roles {
+  text-align: center;
   margin-top: 8%;
   margin-bottom: -5%;
 }
@@ -592,8 +773,31 @@ main .pad-mc-roles {
     margin-bottom: 15%;
   }
 }
-main .pad-mc-roles span {
-  background-color: #444444;
+main .pad-mc-roles table {
+  overflow-x: hidden;
+  border: 1px solid white;
+}
+main .pad-mc-roles table thead tr {
+  margin: 1%;
+}
+main .pad-mc-roles table thead tr th {
+  margin: 1%;
+}
+main .pad-mc-roles table thead tr td {
+  margin: 10%;
+}
+main .pad-mc-roles table thead #thPasa {
+  background-color: #121212;
+}
+main .pad-mc-roles table tbody tr {
+  margin: 1%;
+}
+main .pad-mc-roles table tbody tr th {
+  margin: 1%;
+  font-weight: 100;
+}
+main .pad-mc-roles table tbody tr td {
+  margin: 10%;
 }
 
 footer {
@@ -602,6 +806,7 @@ footer {
   margin: 0 auto;
   position: relative;
   bottom: 0;
+  font-style: italic;
 }
 footer div a {
   text-decoration: none;
@@ -625,12 +830,14 @@ footer .bi {
 }
 
 .div-random-text {
-  height: 10vh;
+  min-height: 10vh;
+  max-height: 10vh;
   font-family: MinecraftFont, Minecraft, serif;
 }
 
 .div-random-textbf {
-  height: 10vh;
+  min-height: 10vh;
+  max-height: 10vh;
   font-family: "Special Elite", system-ui;
 }
 .div-random-textbf h5 {
@@ -653,26 +860,26 @@ i.fa-solid {
   animation: none !important;
 }
 
-#KatastarIMG {
-  max-width: 90%;
-  height: auto;
-  margin: 0 auto;
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000;
 }
 
-.form-check-input[type=radio] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-color: #121212;
-  padding: 0;
-  box-shadow: none;
-}
-.form-check-input[type=radio]:checked {
-  border-color: #fff;
+.separator::before,
+.separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid black;
 }
 
-#ToolTip span {
-  background-color: #121212;
+.separator:not(:empty)::before {
+  margin-right: 0.25em;
+}
+
+.separator:not(:empty)::after {
+  margin-left: 0.25em;
 }
 
 Mods {
@@ -745,6 +952,9 @@ Mods Name {
   }
   .carousel-content h1 {
     font-size: 60px;
+  }
+  #KatastarInteractMapBlock {
+    display: block;
   }
 }
 @media only screen and (max-width: 992px) {

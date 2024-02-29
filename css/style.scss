@@ -234,11 +234,11 @@ main {
         animation: BreathingX 6s ease;
         animation-fill-mode: both;
         animation-iteration-count: infinite;
-    }
-    #join-button:hover {
-        background-color: $whitebg;
-        color: $whitetxt;
-        border: $whiteborder;
+        &:hover {
+            background-color: $whitebg;
+            color: $whitetxt;
+            border: $whiteborder;
+        }
     }
     a {
         text-decoration: none;
@@ -269,6 +269,104 @@ main {
         .form-check-label {
             font-weight: bold;
         }
+        .form-check-input[type="checkbox"] {
+            appearance: none;
+            background-color: $darkbg;
+            padding: 0;
+            box-shadow: none;
+            &:checked  {
+                border-color: $darktxt;
+            }
+        }
+        #ToolTip {
+            span {
+                background-color: $darkbg;
+            }
+        }
+        #KatastarChoice {
+            button {
+                background-color: $whitebg;
+                color: $whitetxt;
+            }
+            .active {
+                font-weight: bold !important;
+            }
+            .dropdown-item.active {
+                background-color: $whitenavbar;
+                color: $whitetxt;
+            }
+            .dropdown-menu {
+                    animation: FadeInLoad 0.2s ease;
+                    animation-fill-mode: both;
+                    border: $whiteborder;
+                .dropdown-item {
+                    font-size: 1rem;
+                }
+                .dropdown-item:hover {
+                    background-color: $whitelinkhover;
+                }
+                .dropdown-item::after{
+                    @include underline-hover-after;
+                }
+                .dropdown-item:hover::after{
+                    @include underline-hover-after2;
+                }
+                .dropdown-divider {
+                    background-color: $whitetxt;
+                    width: 80%;
+                    margin: 0 auto;
+                }
+            }
+        }
+        #KatastarMapChoice {
+            button {
+                background-color: $whitebg;
+                color: $whitetxt;
+                border: $whiteborder;
+                &:hover {
+                    animation: HoverZoom 300ms ease;
+                    animation-fill-mode: both;
+                }
+            }
+        }
+        #KatastarIMGMapBlock {
+            width: 90%;
+            height: auto;
+            margin: 0 auto;
+            #KatastarIMG {
+                max-width: 90%;
+                height: auto;
+                margin: 0 auto;
+            }
+        }
+        // .KatastarIMGMapBlock {
+        //     width: 80%;
+        //     height: 80vh;
+        //     overflow: scroll;
+        //     margin: 0 auto;
+        //     #KatastarIMG {
+        //         min-width: 180%;
+        //         max-height: auto;
+        //         margin: 0 auto;
+        //     }
+        // }
+        // #KatastarIMGMapBlock.KatastarIMGMapBlock.KatastarIMGMapBlockEdited {
+        //     width: 90%;
+        //     height: auto;
+        //     margin: 0 auto;
+        //     overflow: hidden;
+        //     #KatastarIMG {
+        //         min-width: 200%;
+        //         height: auto;
+        //         margin: 0 auto;
+        //     }
+        // }
+        #KatastarInteractMap {
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            font-family: Lora, serif;
+        }
     }
     //For about us
     .pad-about {
@@ -281,9 +379,37 @@ main {
     }   
     //For mc roles 
     .pad-mc-roles {
+        text-align: center;
         @include pad;
-        span {
-            background-color: #444444;
+        table {
+            overflow-x: hidden;
+            border: $darkborder;
+            thead {
+                tr {
+                    margin: 1%;
+                    th {
+                        margin: 1%;
+                    }
+                    td {
+                        margin: 10%;
+                    }
+                }
+                #thPasa {
+                    background-color: $darkbg;
+                }
+            }
+            tbody {
+                tr {
+                    margin: 1%;
+                    th {
+                        margin: 1%;
+                        font-weight: 100;
+                    }
+                    td {
+                        margin: 10%;
+                    }
+                }
+            }
         }
     }
 }
@@ -295,6 +421,7 @@ footer {
    margin: 0 auto;
    position: relative;
    bottom: 0;
+   font-style: italic;
     div {
         a {
             text-decoration: none;
@@ -323,12 +450,14 @@ footer {
 }
 
 .div-random-text{
-    height: 10vh;
+    min-height: 10vh;
+    max-height: 10vh;
     font-family: MinecraftFont, Minecraft, serif;
 }
 
 .div-random-textbf{
-    height: 10vh;
+    min-height: 10vh;
+    max-height: 10vh;
     font-family: 'Special Elite', system-ui;
     h5 {
         font-family: Lora, serif;
@@ -351,30 +480,26 @@ i.fa-solid {
     animation: none !important;
 }
 
-//
-//Katastar CSS
-//
-
-#KatastarIMG {
-    max-width: 90%;
-    height: auto;
-    margin: 0 auto;
+.separator {//separates dropdowns
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $whitetxt;
 }
 
-.form-check-input[type="radio"] {
-    appearance: none;
-    background-color: $darkbg;
-    padding: 0;
-    box-shadow: none;
-    &:checked  {
-        border-color: $darktxt;
-    }
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: $whiteborder;
 }
-
-#ToolTip {
-    span {
-        background-color: $darkbg;
-    }
+ 
+.separator:not(:empty)::before {
+    margin-right: .25em;
+}
+  
+.separator:not(:empty)::after {
+    margin-left: .25em;
 }
 
 //
@@ -421,7 +546,6 @@ Mods {
         color: $whitebg;
     }
 }
-
 //End XML Styling
 
 @import "partials/responsive";

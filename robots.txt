@@ -1,2 +1,2 @@
 User-agent: *
-Disallow: pages/activities/mcroles.html
+Disallow: pages/e_zitelj/Output

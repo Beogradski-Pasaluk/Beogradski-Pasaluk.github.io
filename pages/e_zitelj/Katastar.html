@@ -95,9 +95,9 @@
                         <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>                    
                     </svg>
                     <div>
-                        Сервис катастра је и даље у изради, молимо за мало стрпљења. У међувремену, ове слике служе као катастар. <br>
-                        <strong>Учитавање слика може бити споро у зависности од вашег интернета.</strong> <br>
-                        Проблеми са страницом су очекивани. Све проблеме пријавите MaksiWWGaming на Discord-y или поднесите пријаву преко Github-а.
+                        Сервис катастра је и даље у изради, молимо за мало стрпљења.<br>
+                        <strong>Уколико имате проблем са интернетом, препоручујемо учитавање слика катастра у 'Low Res' секцији.</strong> <br>
+                        Проблеми са страницом су очекивани. Све проблеме пријавите на Discord-y или поднесите пријаву преко Github-а.
                     </div>
                   </div>
                   <br>
@@ -108,27 +108,52 @@
                 </p>
                 <div class="row">
                     <div class="col-12 text-center">
-                        <input class="form-check-input" type="radio" name="Katastar" id="KatastarEmpty" onclick="DisplayMap('0')">
-                        <label class="form-check-label" for="KatastarEmpty">Празна мапа</label>
-                        <br>
-                        <input class="form-check-input" type="radio" name="Katastar" id="KatastarDrawn" checked onclick="DisplayMap('1')">
-                        <label class="form-check-label" for="KatastarDrawn">Исцртана мапа</label>
-                        <br>
-                        <input class="form-check-input" type="radio" name="Katastar" id="KatastarKvadrant" onclick="DisplayMap('2')">
-                        <label class="form-check-label" for="KatastarKvadrant">Квадрант мапа</label>
-                        <br>
+                        <div class="dropdown" id="KatastarChoice">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Изабери приказ катастра</button>
+                            <ul class="dropdown-menu">
+                                <div class="separator">High res</div>
+                                <li><a class="dropdown-item" onclick="DisplayFullResMap('0')">Празна мапа</a></li>
+                                <li><a class="dropdown-item" onclick="DisplayFullResMap('1')">Исцртана мапа</a></li>
+                                <li><a class="dropdown-item" onclick="DisplayFullResMap('2')">Квадрант мапа</a></li>
+                                <div class="separator">Low res</div>
+                                <li><a class="dropdown-item" onclick="DisplayLowResMap('0')">Празна мапа</a></li>
+                                <li><a class="dropdown-item" onclick="DisplayLowResMap('1')">Исцртана мапа</a></li>
+                                <li><a class="dropdown-item" onclick="DisplayLowResMap('2')">Квадрант мапа</a></li>                              
+                            </ul>
+                        </div>
+                        <div class="col-12">
+                            <p class="text-center" id="ToolTip">
+                                <strong style="text-decoration: underline;">Тренутан приказ мапе - Исцртана мапа (ниска резолуција)</strong><br><br>
+                                <span style='color: yellow;'><strong>Жута боја</strong></span> означава регулисану зону државног власништва.<br>
+                                <strong>Црна боја</strong> означава конфисковано власништво житеља.<br>
+                                <strong>Бела боја</strong> означава државно власништво.<br>
+                            </p>
+                        </div>
+                    <div class="col-6 text-center d-inline" id="KatastarMapChoice">
+                        <button class="btn btn-primary" type="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="ShowInteractiveMap()">Прикажи интерактивну мапу</button>
                     </div>
-                    <div class="col-12">
-                        <p class="text-center visible" id="ToolTip">
-                            <span style='color: yellow;'><strong>Жута боја</strong></span> означава регулисану зону државног власништва.<br>
-                            <strong>Бела боја</strong> означава државно власништво.<br>
-                        </p>
-                    </div>
+                    <!-- <div class="col-6 text-center d-inline" id="KatastarMapChoice">
+                        <button class="btn btn-primary" type="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="ShowFullMap()">Прикажи целу мапу</button>
+                    </div> -->
+                    <br><br>
                 </div>
+                <!-- <div class="slidecontainer" align="center">
+                    <label for="myRangeZ">Zoom</label>
+                    <input type="range" min="1" max="100" value="1" class="slider" id="myRangeZ" oninput="jsZoom()">
+                </div>  -->
+                <!-- <span align="center" style="font-size: 10px;">Препоручујемо коришћење open image in new tab док се не среди zoom</span> -->
+                <div class="col-12 KatastarIMGMapBlock" id="KatastarIMGMapBlock">
+                    <img id="KatastarIMG" src="../../img/Pages/Katastar/DrawnMapFullRes_compressed.jpg" class="d-block text-center" oninput="jsZoom()" alt="Слика катастра Пашалука">
+                </div>
+
+                <!-- <div class="col-12 col-sm-12" id="KatastarInteractMapBlock">
+                    <center>
+                        <object data="Output/unmined.index.html" type="text/html" id="KatastarInteractMap"></object>
+                    </center>
+                </div> -->
                 <div class="col-12">
-                    <img id="KatastarIMG" src="../../img/Pages/Katastar/drawnmap.png" class="d-block text-center" alt="Слика катастра Пашалука">
-                    <p class="text-center"><i>Мапа катастра се ажурира сваког 1. и 15. у месецу</i></p>
-                    <p class="text-center"><i>Велико хвала Rubescent13 на исцртавању мапе</i></p>
+                    <p class="text-center"><i>Мапа катастра се ажурира сваког 1. и 15. у месецу</i>
+                    <br><i>Велико хвала Rubescent13 на исцртавању мапе</i></p>
                 </div>
                 <div style="padding-bottom: 5%;"></div>
             </div>
@@ -158,6 +183,5 @@
     <!--My script-->
     <script src="../../js/script.js"></script>
     <script src="../../js/katastar.js"></script>
-
 </body>
 </html>

@@ -50,7 +50,6 @@
             .dropdown-divider {
                 background-color: $darktxt;
             }
-
         }
     }
     main {
@@ -109,9 +108,29 @@
             }
         }
         .pad-mc-roles {
-            span {
-                background-color: $darkbg;
+            table {
+                border: $whiteborder;
+                thead {
+                    tr {
+                        th {
+                            color: $darktxt;
+                            background-color: $darkbg;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        th {
+                            color: $darktxt;
+                            background-color: $darkbg;
+                        }
+                        td {
+                            background-color: $darkbg;
+                        }
+                    }
+                }
             }
+
         }
         #join-button {
             background-color: $whitebg;
@@ -121,6 +140,67 @@
             background-color: $darkbg;
             color: $darktxt;
             border: $darkborder;
+        }
+        .pad-katastar {
+            @include pad;
+            .form-check-label {
+                font-weight: bold;
+            }
+            hr {
+                color: $whitebg;
+            }
+            #KatastarChoice {
+                button {
+                    background-color: $darkbg;
+                    color: $darktxt;
+                }
+                .active {
+                    font-weight: bold !important;
+                }
+                .dropdown-item.active {
+                    background-color: $whitenavbar;
+                    color: $whitetxt;
+                }
+                .dropdown-menu {
+                        border: $darkborder;
+                        background-color: $darkbg;
+                    .dropdown-item {
+                        font-size: 1rem;
+                        color: $darktxt;
+                    }
+                    .dropdown-item:hover {
+                        background-color: $darklinkhover;
+                    }
+                    .dropdown-item::after{
+                        @include underline-hover-after;
+                        background-color: $darktxt;
+                    }
+                    .dropdown-item:hover::after{
+                        @include underline-hover-after2;
+                        background-color: $darktxt;
+                    }
+                    .dropdown-divider {
+                        background-color: $darktxt;
+                    }
+                }    
+            }
+            #KatastarMapChoice {
+                button {
+                    background-color: $darkbg;
+                    color: $darktxt;
+                    border: $darkborder;
+                    &:hover {
+                        animation: HoverZoom 300ms ease;
+                        animation-fill-mode: both;
+                    }
+                }
+            }
+            //Katastar
+            #ToolTip {
+                span {
+                    background-color: $darkbg;
+                }
+            }       
         }
     }
     footer {
@@ -132,10 +212,13 @@
             fill: $darktxt;
         }
     }
-    //Katastar
-    #ToolTip {
-        span {
-            background-color: $darkbg;
-        }
+    .separator {
+        color: $darktxt;
+    }
+    .separator::before,
+    .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: $darkborder;
     }
 }
