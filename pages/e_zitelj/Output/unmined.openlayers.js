@@ -137,15 +137,12 @@ class Unmined {
             ]),
             layers: [
                 unminedLayer,                
-                /*
-                new ol.layer.Tile({
-                    source: new ol.source.TileDebug({
-                        tileGrid: unminedTileGrid,
-                        projection: viewProjection
-                    })
-                })
-                */
-
+                // new ol.layer.Tile({
+                //     source: new ol.source.TileDebug({
+                //         tileGrid: unminedTileGrid,
+                //         projection: viewProjection
+                //     })
+                // })
             ],
             view: new ol.View({
                 center: [0, 0],

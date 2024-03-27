@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap);
 @import url(https://fonts.cdnfonts.com/css/minecraft-4);
 @import url(https://fonts.googleapis.com/css2?family=Special+Elite&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Special+Elite&display=swap);
 @font-face {
   font-family: "MinecraftFont";
   src: url(font/cyrillic-mojang-font-beta.ttf);
@@ -108,6 +109,17 @@
     transform: translateY(-5px);
   }
 }
+@keyframes BGMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .dark-mode {
   background-color: #121212;
   color: #fff;
@@ -204,6 +216,17 @@
 .dark-mode main .container .card .card-body details a {
   color: #fff;
 }
+.dark-mode main .container .accordion .accordion-button {
+  background-color: #0d0d0d;
+  color: #fff;
+}
+.dark-mode main .container .accordion .accordion-body {
+  background-color: #121212;
+  color: #fff;
+}
+.dark-mode main .container .accordion .accordion-body a {
+  color: #fff;
+}
 .dark-mode main .pad-join .container p span {
   background-color: #121212;
 }
@@ -213,6 +236,9 @@
 .dark-mode main .pad-mc-roles table thead tr th {
   color: #fff;
   background-color: #121212;
+}
+.dark-mode main .pad-mc-roles table thead #thPasa {
+  color: #FFFF55;
 }
 .dark-mode main .pad-mc-roles table tbody tr th {
   color: #fff;
@@ -256,8 +282,55 @@
     margin-bottom: 15%;
   }
 }
-.dark-mode main .pad-katastar .form-check-label {
-  font-weight: bold;
+.dark-mode main .pad-katastar #Toast-Alert {
+  box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.15);
+  background-color: #121212;
+}
+.dark-mode main .pad-katastar #Toast-Alert .toast-header {
+  background-color: #121212;
+  color: #fff;
+  border-bottom: 1px solid white;
+}
+.dark-mode main .pad-katastar #Toast-Alert .toast-header .btn-close {
+  color: #fff;
+  background-color: #fff;
+}
+.dark-mode main .pad-katastar #DisplayOptions1 button {
+  background-color: #121212;
+  color: #fff;
+  border: 1px solid white;
+}
+.dark-mode main .pad-katastar #DisplayOptions1 .dropdown-item.active {
+  background-color: #f3f6f4;
+  color: #000;
+}
+.dark-mode main .pad-katastar #DisplayOptions1 .dropdown-menu {
+  border: 1px solid white;
+  background-color: #121212;
+}
+.dark-mode main .pad-katastar #DisplayOptions1 .dropdown-menu .dropdown-item {
+  font-size: 1rem;
+  color: #fff;
+}
+.dark-mode main .pad-katastar #DisplayOptions1 .dropdown-menu .dropdown-item:hover {
+  background-color: #444444;
+}
+.dark-mode main .pad-katastar #DisplayOptions1 .dropdown-menu .dropdown-item::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: black;
+  margin: auto;
+  display: block;
+  background-color: #fff;
+}
+.dark-mode main .pad-katastar #DisplayOptions1 .dropdown-menu .dropdown-item:hover::after {
+  width: 100%;
+  transition: width 150ms linear;
+  background-color: #fff;
+}
+.dark-mode main .pad-katastar #DisplayOptions1 .dropdown-menu .dropdown-divider {
+  background-color: #fff;
 }
 .dark-mode main .pad-katastar hr {
   color: #fff;
@@ -307,11 +380,8 @@
   border: 1px solid white;
 }
 .dark-mode main .pad-katastar #KatastarMapChoice button:hover {
-  animation: HoverZoom 300ms ease;
-  animation-fill-mode: both;
-}
-.dark-mode main .pad-katastar #ToolTip span {
-  background-color: #121212;
+  background-color: #fff;
+  color: #000;
 }
 .dark-mode footer {
   border-top: 1px solid white;
@@ -322,6 +392,57 @@
 .dark-mode footer .bi {
   fill: #fff;
 }
+.dark-mode #Controls {
+  background-color: #121212;
+  border-bottom: 1px solid white;
+}
+.dark-mode #Controls p a {
+  color: #fff;
+}
+.dark-mode #Controls #MapChoice button {
+  background-color: #121212;
+  color: #fff;
+}
+.dark-mode #Controls #MapChoice .active {
+  font-weight: bold !important;
+  color: #121212;
+}
+.dark-mode #Controls #MapChoice .dropdown-item.active {
+  background-color: #121212;
+  color: #000;
+}
+.dark-mode #Controls #MapChoice .dropdown-menu {
+  border: 1px solid white;
+  background-color: #121212;
+}
+.dark-mode #Controls #MapChoice .dropdown-menu .dropdown-item {
+  font-size: 1rem;
+  color: #fff;
+}
+.dark-mode #Controls #MapChoice .dropdown-menu .dropdown-item:hover {
+  background-color: #444444;
+}
+.dark-mode #Controls #MapChoice .dropdown-menu .dropdown-item::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: black;
+  margin: auto;
+  display: block;
+  background-color: #fff;
+}
+.dark-mode #Controls #MapChoice .dropdown-menu .dropdown-item:hover::after {
+  width: 100%;
+  transition: width 150ms linear;
+  background-color: #fff;
+}
+.dark-mode #Controls #MapChoice .dropdown-menu .dropdown-divider {
+  background-color: #fff;
+}
+.dark-mode #Controls #active {
+  background-color: #121212;
+  color: #000;
+}
 .dark-mode .separator {
   color: #fff;
 }
@@ -330,6 +451,45 @@
   content: "";
   flex: 1;
   border-bottom: 1px solid white;
+}
+.dark-mode .pad-katastar-map #KatastarChoice button {
+  background-color: #121212;
+  color: #fff;
+}
+.dark-mode .pad-katastar-map #KatastarChoice .active {
+  font-weight: bold !important;
+}
+.dark-mode .pad-katastar-map #KatastarChoice .dropdown-item.active {
+  background-color: #f3f6f4;
+  color: #000;
+}
+.dark-mode .pad-katastar-map #KatastarChoice .dropdown-menu {
+  border: 1px solid white;
+  background-color: #121212;
+}
+.dark-mode .pad-katastar-map #KatastarChoice .dropdown-menu .dropdown-item {
+  font-size: 1rem;
+  color: #fff;
+}
+.dark-mode .pad-katastar-map #KatastarChoice .dropdown-menu .dropdown-item:hover {
+  background-color: #444444;
+}
+.dark-mode .pad-katastar-map #KatastarChoice .dropdown-menu .dropdown-item::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: black;
+  margin: auto;
+  display: block;
+  background-color: #fff;
+}
+.dark-mode .pad-katastar-map #KatastarChoice .dropdown-menu .dropdown-item:hover::after {
+  width: 100%;
+  transition: width 150ms linear;
+  background-color: #fff;
+}
+.dark-mode .pad-katastar-map #KatastarChoice .dropdown-menu .dropdown-divider {
+  background-color: #fff;
 }
 
 * {
@@ -509,6 +669,9 @@ main .container .card .card-body .card-text a {
   font-style: italic;
   text-decoration: underline;
 }
+main .container .card .card-body .card-text span {
+  font-weight: bold;
+}
 main .container .card .card-body .card-span {
   font-style: italic;
 }
@@ -543,6 +706,19 @@ main .container .card .card-body details a {
 main .container .card:hover {
   animation: HoverZoom 0.3s ease;
   animation-fill-mode: both;
+}
+main .container .accordion .accordion-button {
+  background-color: #f2f2f2;
+  color: #000;
+}
+main .container .accordion .accordion-body {
+  background-color: #fff;
+  color: #000;
+}
+main .container .accordion .accordion-body a {
+  color: #000;
+  font-style: italic;
+  text-decoration: underline;
 }
 main iframe {
   animation: BreathingXY 5s ease;
@@ -605,11 +781,6 @@ main .pad-join .container p {
   margin-top: -5%;
   font-size: 20px;
 }
-main .pad-join .container p span {
-  color: #dfc978;
-  background-color: #444444;
-  font-weight: bold;
-}
 main .pad-katastar {
   margin-top: 8%;
   margin-bottom: -5%;
@@ -636,46 +807,37 @@ main .pad-katastar {
     margin-bottom: 15%;
   }
 }
-main .pad-katastar .form-check-label {
-  font-weight: bold;
+main .pad-katastar #Toast-Alert {
+  border: #f2f2f2;
 }
-main .pad-katastar .form-check-input[type=checkbox] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-color: #121212;
-  padding: 0;
-  box-shadow: none;
+main .pad-katastar #Toast-Alert .toast-header {
+  font-size: 0.9rem;
 }
-main .pad-katastar .form-check-input[type=checkbox]:checked {
-  border-color: #fff;
+main .pad-katastar #Toast-Alert .toast-header img {
+  width: 3%;
 }
-main .pad-katastar #ToolTip span {
-  background-color: #121212;
-}
-main .pad-katastar #KatastarChoice button {
+main .pad-katastar #DisplayOptions1 button {
   background-color: #fff;
   color: #000;
+  animation: HoverZoomOut 300ms ease;
+  animation-fill-mode: both;
 }
-main .pad-katastar #KatastarChoice .active {
-  font-weight: bold !important;
+main .pad-katastar #DisplayOptions1 button:hover {
+  animation: HoverZoom 300ms ease;
+  animation-fill-mode: both;
 }
-main .pad-katastar #KatastarChoice .dropdown-item.active {
-  background-color: #f3f6f4;
-  color: #000;
-}
-main .pad-katastar #KatastarChoice .dropdown-menu {
+main .pad-katastar #DisplayOptions1 .dropdown-menu {
   animation: FadeInLoad 0.2s ease;
   animation-fill-mode: both;
   border: 1px solid black;
 }
-main .pad-katastar #KatastarChoice .dropdown-menu .dropdown-item {
+main .pad-katastar #DisplayOptions1 .dropdown-menu .dropdown-item {
   font-size: 1rem;
 }
-main .pad-katastar #KatastarChoice .dropdown-menu .dropdown-item:hover {
+main .pad-katastar #DisplayOptions1 .dropdown-menu .dropdown-item:hover {
   background-color: #eeeeee;
 }
-main .pad-katastar #KatastarChoice .dropdown-menu .dropdown-item::after {
+main .pad-katastar #DisplayOptions1 .dropdown-menu .dropdown-item::after {
   content: "";
   width: 0;
   height: 2px;
@@ -683,39 +845,22 @@ main .pad-katastar #KatastarChoice .dropdown-menu .dropdown-item::after {
   margin: auto;
   display: block;
 }
-main .pad-katastar #KatastarChoice .dropdown-menu .dropdown-item:hover::after {
+main .pad-katastar #DisplayOptions1 .dropdown-menu .dropdown-item:hover::after {
   width: 100%;
   transition: width 150ms linear;
 }
-main .pad-katastar #KatastarChoice .dropdown-menu .dropdown-divider {
-  background-color: #000;
-  width: 80%;
+main .pad-katastar #KatastarImageMapBlock #KatastarImageMappedBlock {
+  max-width: 85%;
+  min-width: 85%;
+  min-height: 930px;
   margin: 0 auto;
+  overflow-y: hidden;
 }
-main .pad-katastar #KatastarMapChoice button {
-  background-color: #fff;
-  color: #000;
-  border: 1px solid black;
-}
-main .pad-katastar #KatastarMapChoice button:hover {
-  animation: HoverZoom 300ms ease;
-  animation-fill-mode: both;
-}
-main .pad-katastar #KatastarIMGMapBlock {
-  width: 90%;
-  height: auto;
+main .pad-katastar #KatastarInteractMapBlock #KatastarInteractMap {
+  max-width: 85%;
+  min-width: 85%;
+  min-height: 930px;
   margin: 0 auto;
-}
-main .pad-katastar #KatastarIMGMapBlock #KatastarIMG {
-  max-width: 90%;
-  height: auto;
-  margin: 0 auto;
-}
-main .pad-katastar #KatastarInteractMap {
-  width: 400px;
-  height: 400px;
-  margin: 0 auto;
-  font-family: Lora, serif;
 }
 main .pad-about {
   margin-top: 8%;
@@ -782,12 +927,14 @@ main .pad-mc-roles table thead tr {
 }
 main .pad-mc-roles table thead tr th {
   margin: 1%;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 main .pad-mc-roles table thead tr td {
   margin: 10%;
 }
 main .pad-mc-roles table thead #thPasa {
-  background-color: #121212;
+  color: #bbbb00;
 }
 main .pad-mc-roles table tbody tr {
   margin: 1%;
@@ -819,6 +966,138 @@ footer .bi {
   color: black;
 }
 
+#Controls {
+  background-color: #fff;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.5%;
+}
+#Controls img {
+  max-width: 15vw;
+  min-width: 15vw;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  animation: HoverZoomOut 0.5s ease;
+}
+#Controls img:hover {
+  animation: HoverZoom 0.5s ease;
+  animation-fill-mode: both;
+}
+#Controls p a {
+  color: #000;
+}
+#Controls #MapChoice button {
+  background-color: #fff;
+  color: #000;
+  animation: HoverZoomOut 300ms ease;
+  animation-fill-mode: both;
+}
+#Controls #MapChoice button:hover {
+  animation: HoverZoom 300ms ease;
+  animation-fill-mode: both;
+}
+#Controls #MapChoice .active {
+  font-weight: bold !important;
+}
+#Controls #MapChoice .dropdown-item.active {
+  background-color: #f3f6f4;
+  color: #000;
+}
+#Controls #MapChoice .dropdown-menu {
+  animation: FadeInLoad 0.2s ease;
+  animation-fill-mode: both;
+  border: 1px solid black;
+}
+#Controls #MapChoice .dropdown-menu .dropdown-item {
+  font-size: 1rem;
+}
+#Controls #MapChoice .dropdown-menu .dropdown-item:hover {
+  background-color: #eeeeee;
+}
+#Controls #MapChoice .dropdown-menu .dropdown-item::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: black;
+  margin: auto;
+  display: block;
+}
+#Controls #MapChoice .dropdown-menu .dropdown-item:hover::after {
+  width: 100%;
+  transition: width 150ms linear;
+}
+#Controls #MapChoice .dropdown-menu .dropdown-divider {
+  background-color: #000;
+  width: 80%;
+  margin: 0 auto;
+}
+#Controls #active {
+  background-color: #121212;
+  color: #fff;
+}
+
+#map .ol-zoom {
+  background-color: #121212;
+}
+
+.pad-katastar-map {
+  padding-top: 1%;
+  overflow: hidden;
+}
+.pad-katastar-map #KatastarChoice button {
+  background-color: #fff;
+  color: #000;
+  animation: HoverZoomOut 300ms ease;
+  animation-fill-mode: both;
+}
+.pad-katastar-map #KatastarChoice button:hover {
+  animation: HoverZoom ease 0.3s;
+  animation-fill-mode: both;
+}
+.pad-katastar-map #KatastarChoice .dropdown-menu {
+  animation: FadeInLoad 0.2s ease;
+  animation-fill-mode: both;
+  border: 1px solid black;
+}
+.pad-katastar-map #KatastarChoice .dropdown-menu .dropdown-item {
+  font-size: 1rem;
+}
+.pad-katastar-map #KatastarChoice .dropdown-menu .dropdown-item:hover {
+  background-color: #eeeeee;
+}
+.pad-katastar-map #KatastarChoice .dropdown-menu .dropdown-item::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: black;
+  margin: auto;
+  display: block;
+}
+.pad-katastar-map #KatastarChoice .dropdown-menu .dropdown-item:hover::after {
+  width: 100%;
+  transition: width 150ms linear;
+}
+.pad-katastar-map #KatastarChoice .dropdown-menu .dropdown-divider {
+  background-color: #000;
+  width: 80%;
+  margin: 0 auto;
+}
+.pad-katastar-map #KatastarIMGMapBlock {
+  height: auto;
+  position: relative;
+}
+.pad-katastar-map #KatastarIMGMapBlock #KatastarIMG {
+  max-width: 90%;
+  height: auto;
+}
+.pad-katastar-map .img-magnifier-glass {
+  position: absolute;
+  border: 1px solid #000;
+  cursor: none;
+  width: 150px;
+  height: 150px;
+}
+
 .breathing-animation {
   animation: Tugging 1.5s ease;
   animation-fill-mode: both;
@@ -841,7 +1120,7 @@ footer .bi {
   font-family: "Special Elite", system-ui;
 }
 .div-random-textbf h5 {
-  font-family: Lora, serif;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
 }
 
 .mc-font-text {
@@ -854,6 +1133,10 @@ footer .bi {
 
 i.fa-solid {
   padding: 15px;
+}
+
+i.fa-solid.fa-up-right-from-square {
+  padding: 5px;
 }
 
 .no-hover {
@@ -946,15 +1229,17 @@ Mods Name {
   color: #fff;
 }
 
+@media only screen and (max-width: 1400px) {
+  .pad-katastar-mappa #KatastarInteractMapBlock #KatastarInteractMap {
+    height: 700px;
+  }
+}
 @media only screen and (max-width: 1200px) {
   .navbar .nav-item {
     margin: 15px;
   }
   .carousel-content h1 {
     font-size: 60px;
-  }
-  #KatastarInteractMapBlock {
-    display: block;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -983,10 +1268,32 @@ Mods Name {
   .col-12.col-lg-3 {
     margin-top: 3%;
   }
+  #Toast-Alert {
+    width: 75% !important;
+  }
+  #Toast-Alert .toast-header img {
+    width: 7% !important;
+  }
+  .pad-katastar-mappa #KatastarImageMapBlock #KatastarImageMappedBlock {
+    height: 1000px;
+  }
+  .pad-katastar-mappa #KatastarInteractMapBlock #KatastarInteractMap {
+    height: 820px;
+  }
 }
 @media only screen and (max-width: 768px) {
   .col-12.col-md-6.col-lg-5 {
     margin: 1%;
+  }
+  #join-button {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .pad-katastar-mappa #KatastarImageMapBlock #KatastarImageMappedBlock {
+    height: 30px;
+  }
+  .pad-katastar-mappa #KatastarInteractMapBlock #KatastarInteractMap {
+    height: 300px;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -1004,5 +1311,11 @@ Mods Name {
   }
   .card:hover {
     animation: none;
+  }
+  .pad-katastar-mappa #KatastarImageMapBlock #KatastarImageMappedBlock {
+    height: 420px;
+  }
+  .pad-katastar-mappa #KatastarInteractMapBlock #KatastarInteractMap {
+    height: 420px;
   }
 }/*# sourceMappingURL=style.css.map */

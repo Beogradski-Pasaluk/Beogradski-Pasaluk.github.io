@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap);
 @import url(https://fonts.cdnfonts.com/css/minecraft-4);
 @import url(https://fonts.googleapis.com/css2?family=Special+Elite&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Special+Elite&display=swap);
 @font-face {
     font-family: "MinecraftFont";
     src: url(font/cyrillic-mojang-font-beta.ttf)
@@ -175,6 +176,9 @@ main {
                         color: $whitetxt;
                         font-style: italic;
                         text-decoration: underline;
+                    } 
+                    span {
+                        font-weight: bold;
                     }
                 }
                 .card-span {
@@ -216,6 +220,21 @@ main {
             animation: HoverZoom 0.3s ease;
             animation-fill-mode: both;
         }
+        .accordion {
+            .accordion-button {
+                background-color: #f2f2f2;
+                color: $whitetxt;
+            }
+            .accordion-body {
+                background-color: $whitebg;
+                color: $whitetxt;
+                a {
+                    color: $whitetxt;
+                    font-style: italic;
+                    text-decoration: underline;                        
+                }
+            }
+        }
     }
     iframe {
         animation: BreathingXY 5s ease;
@@ -255,50 +274,36 @@ main {
             p {
                 margin-top: -5%;
                 font-size: 20px;
-              span {
-                color: #dfc978;
-                background-color: #444444;
-                font-weight: bold
-              }  
             }
         }
     }
     //For katastar
     .pad-katastar {
         @include pad;
-        .form-check-label {
-            font-weight: bold;
-        }
-        .form-check-input[type="checkbox"] {
-            appearance: none;
-            background-color: $darkbg;
-            padding: 0;
-            box-shadow: none;
-            &:checked  {
-                border-color: $darktxt;
+        #Toast-Alert {
+            border: #f2f2f2;
+            .toast-header {
+                font-size: 0.9rem;
+                img {
+                    width: 3%;
+                }
             }
         }
-        #ToolTip {
-            span {
-                background-color: $darkbg;
-            }
-        }
-        #KatastarChoice {
+        #DisplayOptions1 {
             button {
                 background-color: $whitebg;
                 color: $whitetxt;
-            }
-            .active {
-                font-weight: bold !important;
-            }
-            .dropdown-item.active {
-                background-color: $whitenavbar;
-                color: $whitetxt;
+                animation: HoverZoomOut 300ms ease;
+                animation-fill-mode: both;
+                &:hover {
+                    animation: HoverZoom 300ms ease;
+                    animation-fill-mode: both;
+                }
             }
             .dropdown-menu {
-                    animation: FadeInLoad 0.2s ease;
-                    animation-fill-mode: both;
-                    border: $whiteborder;
+                animation: FadeInLoad 0.2s ease;
+                animation-fill-mode: both;
+                border: $whiteborder;
                 .dropdown-item {
                     font-size: 1rem;
                 }
@@ -311,63 +316,26 @@ main {
                 .dropdown-item:hover::after{
                     @include underline-hover-after2;
                 }
-                .dropdown-divider {
-                    background-color: $whitetxt;
-                    width: 80%;
-                    margin: 0 auto;
-                }
             }
         }
-        #KatastarMapChoice {
-            button {
-                background-color: $whitebg;
-                color: $whitetxt;
-                border: $whiteborder;
-                &:hover {
-                    animation: HoverZoom 300ms ease;
-                    animation-fill-mode: both;
-                }
+        #KatastarImageMapBlock {
+            #KatastarImageMappedBlock {
+                max-width: 85%;
+                min-width: 85%;
+                min-height: 930px;
+                margin: 0 auto;
+                overflow-y: hidden;
             }
         }
-        #KatastarIMGMapBlock {
-            width: 90%;
-            height: auto;
-            margin: 0 auto;
-            #KatastarIMG {
-                max-width: 90%;
-                height: auto;
+        #KatastarInteractMapBlock {
+            #KatastarInteractMap {
+                max-width: 85%;
+                min-width: 85%;
+                min-height: 930px;
                 margin: 0 auto;
             }
         }
-        // .KatastarIMGMapBlock {
-        //     width: 80%;
-        //     height: 80vh;
-        //     overflow: scroll;
-        //     margin: 0 auto;
-        //     #KatastarIMG {
-        //         min-width: 180%;
-        //         max-height: auto;
-        //         margin: 0 auto;
-        //     }
-        // }
-        // #KatastarIMGMapBlock.KatastarIMGMapBlock.KatastarIMGMapBlockEdited {
-        //     width: 90%;
-        //     height: auto;
-        //     margin: 0 auto;
-        //     overflow: hidden;
-        //     #KatastarIMG {
-        //         min-width: 200%;
-        //         height: auto;
-        //         margin: 0 auto;
-        //     }
-        // }
-        #KatastarInteractMap {
-            width: 400px;
-            height: 400px;
-            margin: 0 auto;
-            font-family: Lora, serif;
-        }
-    }
+    }    
     //For about us
     .pad-about {
         @include pad;
@@ -389,13 +357,15 @@ main {
                     margin: 1%;
                     th {
                         margin: 1%;
+                        font-size: 1.3rem;
+                        font-weight: bold;
                     }
                     td {
                         margin: 10%;
                     }
                 }
                 #thPasa {
-                    background-color: $darkbg;
+                    color: darken($color: #FFFF55, $amount: 30);
                 }
             }
             tbody {
@@ -436,6 +406,141 @@ footer {
     }
 }
 
+//For Interactive map 
+#Controls {
+    background-color: $whitebg;
+    border-bottom: $whiteborder;
+    padding-bottom: 0.5%;
+    img {
+        max-width: 15vw;
+        min-width: 15vw;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        animation: HoverZoomOut 0.5s ease;
+    }
+    img:hover {
+        animation: HoverZoom 0.5s ease;
+        animation-fill-mode: both;
+    }
+    p {
+        a {
+            color: $whitetxt;
+        }
+    }
+    #MapChoice {
+        button {
+            background-color: $whitebg;
+            color: $whitetxt;
+            animation: HoverZoomOut 300ms ease;
+            animation-fill-mode: both;
+            &:hover {
+                animation: HoverZoom 300ms ease;
+                animation-fill-mode: both;
+            }
+        }
+        .active {
+            font-weight: bold !important;
+        }
+        .dropdown-item.active {
+            background-color: $whitenavbar;
+            color: $whitetxt;
+        }
+        .dropdown-menu {
+                animation: FadeInLoad 0.2s ease;
+                animation-fill-mode: both;
+                border: $whiteborder;
+            .dropdown-item {
+                font-size: 1rem;
+            }
+            .dropdown-item:hover {
+                background-color: $whitelinkhover;
+            }
+            .dropdown-item::after{
+                @include underline-hover-after;
+            }
+            .dropdown-item:hover::after{
+                @include underline-hover-after2;
+            }
+            .dropdown-divider {
+                background-color: $whitetxt;
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    }
+    #active {
+        background-color: $darkbg;
+        color: $darktxt;
+    }
+}
+
+#map {
+    .ol-zoom {
+        background-color: $darkbg;
+    }
+}
+
+//External katastar map
+.pad-katastar-map {
+    padding-top: 1%;
+    overflow: hidden;
+    #KatastarChoice {
+        @extend #KatastarChoice;
+        button {
+            background-color: $whitebg;
+            color: $whitetxt;
+            animation: HoverZoomOut 300ms ease;
+            animation-fill-mode: both;
+            &:hover {
+                animation: HoverZoom ease 0.3s;
+                animation-fill-mode: both;
+            }
+        }
+        .dropdown-menu {
+            animation: FadeInLoad 0.2s ease;
+            animation-fill-mode: both;
+            border: $whiteborder;
+            .dropdown-item {
+                font-size: 1rem;
+            }
+            .dropdown-item:hover {
+                background-color: $whitelinkhover;
+            }
+            .dropdown-item::after{
+                @include underline-hover-after;
+            }
+            .dropdown-item:hover::after{
+                @include underline-hover-after2;
+            }
+            .dropdown-divider {
+                background-color: $whitetxt;
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    }
+    #KatastarMapChoice {
+        @extend #KatastarMapChoice;
+    }
+    #KatastarIMGMapBlock {
+        height: auto;
+        position: relative;
+        #KatastarIMG {
+            max-width: 90%;
+            height: auto;
+        }
+    }
+    .img-magnifier-glass {
+        position: absolute;
+        border: 1px solid #000;
+        cursor: none;
+        width: 150px;
+        height: 150px;
+      }
+}
+
+
 //
 //Other CSS
 //
@@ -460,7 +565,7 @@ footer {
     max-height: 10vh;
     font-family: 'Special Elite', system-ui;
     h5 {
-        font-family: Lora, serif;
+        font-family: "Fira Sans Extra Condensed", sans-serif;
     }
 }
 
@@ -474,6 +579,10 @@ footer {
 
 i.fa-solid {
     padding: 15px;
+}
+
+i.fa-solid.fa-up-right-from-square {
+    padding: 5px;
 }
 
 .no-hover { //removes hover animation on cards

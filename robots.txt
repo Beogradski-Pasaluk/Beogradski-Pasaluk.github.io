@@ -1,2 +1,3 @@
 User-agent: *
 Disallow: pages/e_zitelj/Output
+Disallow: pages/e_zitelj/KatastarMap.html

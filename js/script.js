@@ -163,7 +163,6 @@ document.addEventListener("DOMContentLoaded", function(){
 document.querySelectorAll('details').forEach((el) => {
   new Accordion(el);
 });
-
 //
 // End of script for scrolling details element
 //

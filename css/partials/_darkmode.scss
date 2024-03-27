@@ -97,6 +97,19 @@
                     }
                 }
             }
+            .accordion {
+                .accordion-button {
+                    background-color: #0d0d0d;
+                    color: $darktxt;
+                }
+                .accordion-body {
+                    background-color: $darkbg;
+                    color: $darktxt;
+                    a {
+                        color: $darktxt;                        
+                    }
+                }
+            }
         }
         .pad-join {
             .container {
@@ -116,6 +129,9 @@
                             color: $darktxt;
                             background-color: $darkbg;
                         }
+                    }
+                    #thPasa {
+                        color: #FFFF55;
                     }
                 }
                 tbody {
@@ -143,8 +159,51 @@
         }
         .pad-katastar {
             @include pad;
-            .form-check-label {
-                font-weight: bold;
+            #Toast-Alert {
+                box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.15);
+                .toast-header {
+                    background-color: $darkbg;
+                    color: $darktxt;
+                    border-bottom: $darkborder;
+                    .btn-close {
+                        color: $darktxt;
+                        background-color: $whitebg;
+                    }
+                }
+                background-color: $darkbg;
+            }
+            #DisplayOptions1 {
+                button {
+                    background-color: $darkbg;
+                    color: $darktxt;
+                    border: $darkborder;
+                }
+                .dropdown-item.active {
+                    background-color: $whitenavbar;
+                    color: $whitetxt;
+                }
+                .dropdown-menu {
+                        border: $darkborder;
+                        background-color: $darkbg;
+                    .dropdown-item {
+                        font-size: 1rem;
+                        color: $darktxt;
+                    }
+                    .dropdown-item:hover {
+                        background-color: $darklinkhover;
+                    }
+                    .dropdown-item::after{
+                        @include underline-hover-after;
+                        background-color: $darktxt;
+                    }
+                    .dropdown-item:hover::after{
+                        @include underline-hover-after2;
+                        background-color: $darktxt;
+                    }
+                    .dropdown-divider {
+                        background-color: $darktxt;
+                    }
+                }  
             }
             hr {
                 color: $whitebg;
@@ -190,18 +249,13 @@
                     color: $darktxt;
                     border: $darkborder;
                     &:hover {
-                        animation: HoverZoom 300ms ease;
-                        animation-fill-mode: both;
+                        background-color: $whitebg;
+                        color: $whitetxt;
                     }
                 }
-            }
-            //Katastar
-            #ToolTip {
-                span {
-                    background-color: $darkbg;
-                }
-            }       
+            }     
         }
+    
     }
     footer {
         border-top: $darkborder;
@@ -212,6 +266,56 @@
             fill: $darktxt;
         }
     }
+    //Interactive map
+    #Controls {
+        background-color: $darkbg;
+        border-bottom: $darkborder;
+        p {
+            a {
+                color: $darktxt;
+            }
+        }
+        #MapChoice {
+            button {
+                background-color: $darkbg;
+                color: $darktxt;
+            }
+            .active {
+                font-weight: bold !important;
+                color: $darkbg;
+            }
+            .dropdown-item.active {
+                background-color: $darkbg;
+                color: $whitetxt;
+            }
+            .dropdown-menu {
+                    border: $darkborder;
+                    background-color: $darkbg;
+                .dropdown-item {
+                    font-size: 1rem;
+                    color: $darktxt;
+                }
+                .dropdown-item:hover {
+                    background-color: $darklinkhover;
+                }
+                .dropdown-item::after{
+                    @include underline-hover-after;
+                    background-color: $darktxt;
+                }
+                .dropdown-item:hover::after{
+                    @include underline-hover-after2;
+                    background-color: $darktxt;
+                }
+                .dropdown-divider {
+                    background-color: $darktxt;
+                }
+            }    
+        }
+        #active {
+            background-color: $darkbg;
+            color: $whitetxt;
+        }
+    }
     .separator {
         color: $darktxt;
     }
@@ -220,5 +324,43 @@
     content: '';
     flex: 1;
     border-bottom: $darkborder;
+    }
+    //External katastar map
+    .pad-katastar-map {
+        #KatastarChoice {
+            button {
+                background-color: $darkbg;
+                color: $darktxt;
+            }
+            .active {
+                font-weight: bold !important;
+            }
+            .dropdown-item.active {
+                background-color: $whitenavbar;
+                color: $whitetxt;
+            }
+            .dropdown-menu {
+                    border: $darkborder;
+                    background-color: $darkbg;
+                .dropdown-item {
+                    font-size: 1rem;
+                    color: $darktxt;
+                }
+                .dropdown-item:hover {
+                    background-color: $darklinkhover;
+                }
+                .dropdown-item::after{
+                    @include underline-hover-after;
+                    background-color: $darktxt;
+                }
+                .dropdown-item:hover::after{
+                    @include underline-hover-after2;
+                    background-color: $darktxt;
+                }
+                .dropdown-divider {
+                    background-color: $darktxt;
+                }
+            }    
+        }
     }
 }
