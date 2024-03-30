@@ -119,25 +119,21 @@
                         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Искључиви прикази</button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" onclick="DisplayMap()">Карта</a></li>
-                            <li><a class="dropdown-item" onclick="DisplayMapNInteract('1')">Карта + Мапа</a></li>
-                            <li><a class="dropdown-item" onclick="DisplayInteract('2')">Мапа</a></li>                              
+                            <li><a class="dropdown-item" onclick="DisplayMapNInteract()">Карта + Мапа</a></li>
+                            <li><a class="dropdown-item" onclick="DisplayInteract()">Мапа</a></li>                              
                         </ul>
                     </div>
                     <p class="text-center" id="ToolTip">
                         <strong>Тренутан приказ - <span class="text-decoration-underline">Карта + Мапа</span></strong><br><br>
                     </p>
+                    <br><hr class="separator w-50 m-auto"><br>
                 </div>
                 <div class="row">
-                    <div class="col-12 col-lg-6 m-auto" id="KatastarImageMapBlock">
-                        <center>
+                    <div class="col-12 col-lg-6 m-auto text-center" id="KatastarImageMapBlock">
                             <object data="KatastarMap.html" type="text/html" id="KatastarImageMappedBlock"></object>
-                        </center>
                     </div>
-                    <br><br><br><br><br>
-                    <div class="col-12 col-lg-6 m-auto" id="KatastarInteractMapBlock">
-                        <center>
+                    <div class="col-12 col-lg-6 m-auto text-center" id="KatastarInteractMapBlock">
                             <object data="Output/unmined.index.html" type="text/html" id="KatastarInteractMap"></object>
-                        </center>
                     </div>
                 </div>
                 <div style="padding-bottom: 5%;"></div>

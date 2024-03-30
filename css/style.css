@@ -1289,6 +1289,9 @@ Mods Name {
     width: 80%;
     margin: 0 auto;
   }
+  .pad-katastar-mappa #KatastarImageMapBlock {
+    padding-bottom: 2%;
+  }
   .pad-katastar-mappa #KatastarImageMapBlock #KatastarImageMappedBlock {
     height: 30px;
   }
