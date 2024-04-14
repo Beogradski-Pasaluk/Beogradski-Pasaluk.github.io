@@ -182,5 +182,18 @@ UnminedCustomMarkers = {
             offsetY: 20,
             font: "bold 15px Montserrat,sans serif",
         },
+        {
+            x: -23,
+            z: -44,
+            image: "objects.of.interest.pin.png",
+            imageAnchor: [0.5, 1],
+            imageScale: 0.5,
+            text: "Споменик НАТО Агресије На Воз 393",
+            textColor: "white",
+            textBackgroundColor: "black", 
+            offsetX: 0,
+            offsetY: 20,
+            font: "bold 15px Montserrat,sans serif",
+        }
     ]
 }
